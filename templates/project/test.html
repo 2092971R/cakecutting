@@ -1,0 +1,710 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+
+{% block title %}{% endblock %}
+{% block body_block %}
+  <link type="text/css" rel="stylesheet" href="{% static 'div/slider/dist/jquery.nstSlider.css'%}"></link>
+  <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"></link>
+  <link href="{% static 'test.css' %}"type="text/css" rel="stylesheet" ></link>
+
+
+<img id='garden' src = "{%static "images/garden.jpg" %}" alt = "garden" width = 90% style="display: none;"/>
+<div>
+    <canvas id="firstCanvas" width="400" height="200" style="position: absolute; left: 100px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+    <canvas id="secondCanvas" width="400" height="200" style="position: absolute; left: 100px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>
+	<canvas id="thirdCanvas" width="400" height="200" style="position: absolute; left: 100px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>
+</div>
+<div>
+    <canvas id="shellCanvas" width="600" height="200">Your browser does not support the HTML5 canvas tag.</canvas>
+</div>
+
+<body onload="start()" >
+User 4 cut the cake 3 times into 4 equal pieces
+	<section id = "slider1">
+	<div class="nstSlider" data-range_min="0" data-range_max="100" 
+						   data-cur_min="0">
+
+		<div class="leftGrip"></div>
+	</div>
+	</section>
+	<button onclick="cut()">Submit</button>
+	<p id="split"></p>
+		<div id="hide">
+			<div class="row">
+			User 1 please rank these 4 slices
+						<div class="col-sm-4" style="background-color:white;">
+						  <canvas onclick="rank(1,1)"id="ranking11" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+						</div>
+						<div class="col-sm-4" style="background-color:white;">
+						  <canvas onclick="rank(1,2)" id="ranking12" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+						</div>
+						<div class="col-sm-4" style="background-color:white;">
+						  <canvas onclick="rank(1,3)" id="ranking13" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+						</div>
+						<div class="col-sm-4" style="background-color:white;">
+						  <canvas onclick="rank(1, 4)" id="ranking14" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+						</div>
+			 </div>
+		</div>
+		<div id="hide2">
+			<div class="row">
+			User 2 please rank these 4 slices
+						<div class="col-sm-4" style="background-color:white;">
+						  <canvas onclick="rank(2,1)"id="ranking21" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+						</div>
+						<div class="col-sm-4" style="background-color:white;">
+						  <canvas onclick="rank(2,2)" id="ranking22" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+						</div>
+						<div class="col-sm-4" style="background-color:white;">
+						  <canvas onclick="rank(2,3)" id="ranking23" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+						</div>
+						<div class="col-sm-4" style="background-color:white;">
+						  <canvas onclick="rank(2, 4)" id="ranking24" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+						</div>
+			 </div>
+		</div>
+		<div id="hide3">
+			<div class="row">
+					  User 3 please rank these 4 slices
+						<div class="col-sm-4" style="background-color:white;">
+						  <canvas onclick="rank(3,1)"id="ranking31" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+						</div>
+						<div class="col-sm-4" style="background-color:white;">
+						  <canvas onclick="rank(3,2)" id="ranking32" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+						</div>
+						<div class="col-sm-4" style="background-color:white;">
+						  <canvas onclick="rank(3,3)" id="ranking33" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+						</div>
+						<div class="col-sm-4" style="background-color:white;">
+						  <canvas onclick="rank(3, 4)" id="ranking34" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+						</div>
+			 </div>
+		</div>
+		
+		<div id = "differentPreferences">
+			<div class = "row">
+					<div class="col-sm-4" style="background-color:white;">
+					User 1 this is your slice
+					  <canvas id="user1" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+					</div>
+					<div class="col-sm-4" style="background-color:white;">
+					User 2 this is your slice
+					  <canvas id="user2" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+					</div>
+					<div class="col-sm-4" style="background-color:white;">
+					User 3 this is your slice
+					  <canvas id="user3" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+					</div>
+					<div class="col-sm-4" style="background-color:white;">
+					User 4 this is your slice
+					  <canvas id="user4" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+					</div>
+				</div>
+		</div>
+		<div id= "threeSlicesTwoTrim">
+			<div class= "row">
+					<div class ="trimMe1"></div>
+					<div class="col-sm-6" style="background-color:white;">
+						<canvas id="userITrim1" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+						<canvas id="coverCanvas" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>
+					</div>
+					<div class="col-sm-6" style="background-color:white;">
+						<canvas id="userITrim2" width="400" height="200" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+					</div>	
+			</div>
+			<section id="slider2">
+						<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="10"     data-cur_max="0">
+							<div class="bar"></div>
+							<div class="leftGrip"></div>
+						</div>
+			</section>
+			<button onclick="threeSlices2TrimCut1()">Submit</button>
+			<div id = "hide4">
+				<div class= "row">
+						<div class ="trimMe2"></div>
+						<div class="col-sm-6" style="background-color:white;">
+							<canvas id="userKTrim1" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+							<canvas id="coverCanvas2" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>
+						</div>
+						<div class="col-sm-6" style="background-color:white;">
+							<canvas id="userKTrim2" width="400" height="200" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+						</div>
+				</div>
+				<section id="slider3">
+						<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="10"     data-cur_max="0">
+							<div class="bar"></div>
+							<div class="leftGrip"></div>
+						</div>
+				</section>
+				<button onclick="threeSlices2TrimCut2()">Submit</button>	
+				<div id = "hide5">
+					<div class= "row">
+							<div class ="trimMe3"></div>
+							<div class="col-sm-4" style="background-color:white;">
+								<canvas id="userJTrim1" width="300" height="150" style="position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+								<canvas id="coverCanvas3" width="300" height="150" style="position: absolute; left: 0px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>
+							</div>
+							<div class="col-sm-4" style="background-color:white;">
+								<canvas id="userJTrim2" width="300" height="150" style="position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+								<canvas id="coverCanvas4" width="300" height="150" style="position: absolute; left: 0px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>
+							</div>
+							<div class="col-sm-4" style="background-color:white;">
+								<canvas id="userJTrim3" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+							</div>
+					</div>
+					<section id="slider4">
+						<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="20"    data-cur_max="80">
+							<div class="bar"></div>
+							<div class="leftGrip"></div>
+							<div class="rightGrip"></div>
+						</div>
+					</section>
+					<button onclick="threeSlices2TrimCut3()">Submit</button>
+				</div>
+			</div>
+			<div id = "hide7">
+				<div class = "jChoose"></div>
+				<div class = "row">
+					<div class="col-sm-6" style="background-color:white;">
+						<canvas id="userJChooseA" onclick="jChoose(1)" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+					</div>
+					<div class="col-sm-6" style="background-color:white;">
+						<canvas id="userJChooseB" onclick ="jChoose(2)" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+					</div>
+				</div>
+			</div>
+			<div id = "hide6">
+			<div class = "row">
+					<div class="col-sm-4" style="background-color:white;">
+					<div class ="iSlice"></div>
+					  <canvas id="threeTwo1" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+					</div>
+					<div class="col-sm-4" style="background-color:white;">
+					<div class ="kSlice"></div>
+					  <canvas id="threeTwo2" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+					</div>
+					<div class="col-sm-4" style="background-color:white;">
+					<div class ="jSlice"></div>
+					  <canvas id="threeTwo3" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+					</div>
+					<div class="col-sm-4" style="background-color:white;">
+					User 4 this is your slice
+					  <canvas id="threeTwo4" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+					</div>
+			</div>
+			</div>
+		
+		</div>
+		<div id= "twoSlicesThreeTrim">
+		User 1 trim your two prefered slices to match your third prefered slice 
+					<div class= "row">
+							<div class="col-sm-4" style="background-color:white;">
+								<canvas id="user1TrimA" width="300" height="150" style="position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+								<canvas id="coverCanvas5" width="300" height="150" style="position: absolute; left: 0px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>
+							</div>
+							<div class="col-sm-4" style="background-color:white;">
+								<canvas id="user1TrimB" width="300" height="150" style="position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+								<canvas id="coverCanvas6" width="300" height="150" style="position: absolute; left: 0px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>
+							</div>
+							<div class="col-sm-4" style="background-color:white;">
+								<canvas id="user1TrimC" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+							</div>		
+					</div>
+					<section id="slider5">
+						<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="20"    data-cur_max="80">
+							<div class="bar"></div>
+							<div class="leftGrip"></div>
+							<div class="rightGrip"></div>
+						</div>
+					</section>
+					<button onclick="twoSlicesThreeTrim1()">Submit</button>
+					<div id= "twoSlicesThreeTrim2">
+					User2 trim your two prefered slices to match your third prefered slice 
+							<div class= "row">
+									<div class="col-sm-4" style="background-color:white;">
+										<canvas id="user2TrimA" width="300" height="150" style="position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+										<canvas id="coverCanvas7" width="300" height="150" style="position: absolute; left: 0px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>
+									</div>
+									<div class="col-sm-4" style="background-color:white;">
+										<canvas id="user2TrimB" width="300" height="150" style="position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+										<canvas id="coverCanvas8" width="300" height="150" style="position: absolute; left: 0px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>
+									</div>
+									<div class="col-sm-4" style="background-color:white;">
+										<canvas id="user2TrimC" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+									</div>
+							</div>
+							<section id="slider6">
+								<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="20"    data-cur_max="80">
+									<div class="bar"></div>
+									<div class="leftGrip"></div>
+									<div class="rightGrip"></div>
+								</div>
+							</section>
+							<button onclick="twoSlicesThreeTrim2()">Submit</button>
+							
+							<div id= "twoSlicesThreeTrim3">
+							User3 trim your two prefered slices to match your third prefered slice 
+									<div class= "row">
+											
+											<div class="col-sm-4" style="background-color:white;">
+												<canvas id="user3TrimA" width="300" height="150" style="position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+												<canvas id="coverCanvas9" width="300" height="150" style="position: absolute; left: 0px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>
+											</div>
+											<div class="col-sm-4" style="background-color:white;">
+												<canvas id="user3TrimB" width="300" height="150" style="position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+												<canvas id="coverCanvas10" width="300" height="150" style="position: absolute; left: 0px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>
+											</div>
+											<div class="col-sm-4" style="background-color:white;">
+												<canvas id="user3TrimC" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+											</div>
+									</div>
+									<section id="slider7">
+										<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="20"    data-cur_max="80">
+											<div class="bar"></div>
+											<div class="leftGrip"></div>
+											<div class="rightGrip"></div>
+										</div>
+									</section>
+									<button onclick="twoSlicesThreeTrim3()">Submit</button>
+									<div id= "kNeed">
+										<div class = "kChoose"></div>
+										<div class= "row">
+											
+											<div class="col-sm-6" style="background-color:white;">
+												<canvas id="kChooseA" onclick= "kChosen(1)" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+											</div>
+											<div class="col-sm-6" style="background-color:white;">
+												<canvas id="kChooseB" onclick = "kChosen(2)" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+												
+											</div>
+										</div>
+									
+									
+									</div>
+									<div id = "finalAllocation">
+										<div class = "row">
+											<div class="col-sm-4" style="background-color:white;">
+											<div class ="nSlice"></div>
+											  <canvas id="twoThree1" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+											</div>
+											<div class="col-sm-4" style="background-color:white;">
+											<div class ="kSlice"></div>
+											  <canvas id="twoThree2" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+											</div>
+											<div class="col-sm-4" style="background-color:white;">
+											<div class ="otherSlice"></div>
+											  <canvas id="twoThree3" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+											</div>
+											<div class="col-sm-4" style="background-color:white;">
+											User 4 this is your slice
+											  <canvas id="twoThree4" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+											</div>
+									</div>
+									</div>
+							</div>
+							
+					</div>
+				
+		</div>
+		<div id = "oneSliceOneTrim">
+			<div id = "preferedPiece">
+				<div class = "jCuts"></div>
+				
+					<div class= "row">
+						<div class="col-sm-6" style="background-color:white;">
+								<canvas id="jCutsB" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+								<canvas id="coverCanvas11" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>
+						</div>
+						<div class="col-sm-6" style="background-color:white;">
+								<canvas id="jCutsC" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+				
+						</div>
+					
+					</div>
+				<section id="slider8">
+					<div class="nstSlider" data-range_min="0" data-range_max="100"  data-cur_min="0">
+
+							<div class="leftGrip"></div>
+						</div>
+				</section>
+				<button onclick= "jCuts()">Submit</button>
+				
+				<div id = "preferedPiece2">
+					<div class = "kCuts"></div>
+					<div class= "row">
+						<div class="col-sm-6" style="background-color:white;">
+								<canvas id="kCutsB" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+								<canvas id="coverCanvas12" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>
+						</div>
+						<div class="col-sm-6" style="background-color:white;">
+								<canvas id="kCutsC" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+				
+						</div>
+					</div>
+					<section id="slider9">
+						<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="20"    data-cur_max="80">
+						<div class="bar"></div>
+						<div class="leftGrip"></div>
+						</div>
+					</section>
+					<button onclick="kCuts()">Submit</button>
+				
+				<div id = "preferedPieceAllocation">
+						<div class = "row">
+							<div class="col-sm-4" style="background-color:white;">
+							<div class ="iSliceAlloc"></div>
+	    					<canvas id="oneOneP1" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+							</div>
+							<div class="col-sm-4" style="background-color:white;">
+							<div class ="kSliceAlloc"></div>
+							<canvas id="oneOneP2" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+							</div>
+							<div class="col-sm-4" style="background-color:white;">
+							<div class ="jSliceAlloc"></div>
+							<canvas id="oneOneP3" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+							</div>
+							<div class="col-sm-4" style="background-color:white;">
+							User 4 this is your slice
+							<canvas id="oneOneP4" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+							</div>
+						</div>
+				</div>
+				
+				
+				</div>
+			
+			
+			</div>
+		</div>
+		<div id = "twoSlicesOneTrim">
+			<div id = "dPrefered">
+				<div class= "dPreferedJ"></div>
+				<div class= "row">
+							<div class="col-sm-6" style="background-color:white;">
+								<canvas id="userJTrimA" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+								<canvas id="coverCanvas13" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>
+							</div>
+							<div class="col-sm-6" style="background-color:white;">
+								<canvas id="userJOther" width="400" height="200" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+							</div>		
+				</div>
+				<section id="slider10">
+						<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="20"    data-cur_max="80">
+							<div class="leftGrip"></div>
+						</div>
+				</section>
+				<button onclick="Dprefered2()">Submit</button>
+				
+				<div id = "dPreferedK">
+					<div class= "dPreferedK2"></div>
+					<div class= "row">
+								<div class="col-sm-6" style="background-color:white;">
+									<canvas id="userKTrimA" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+									<canvas id="coverCanvas14" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>
+								</div>
+								<div class="col-sm-6" style="background-color:white;">
+									<canvas id="userKOther" width="400" height="200" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+								</div>		
+					</div>
+					<section id="slider11">
+							<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="20"    data-cur_max="80">
+								<div class="leftGrip"></div>
+							</div>
+					</section>
+					<button onclick="Dprefered3()">Submit</button>
+				</div>
+			
+			</div>
+			<div id = "cPrefered">
+				<div class= "cPreferedI"></div>
+				<div class= "row">
+							<div class="col-sm-6" style="background-color:white;">
+								<canvas id="userITrimB" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+								<canvas id="coverCanvas15" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>
+							</div>
+							<div class="col-sm-6" style="background-color:white;">
+								<canvas id="userIOther" width="400" height="200" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+							</div>		
+				</div>
+				<section id="slider12">
+						<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="20"    data-cur_max="80">
+							<div class="leftGrip"></div>
+						</div>
+				</section>
+				<button onclick="Cprefered2()">Submit</button>
+				
+				<div id = "cPreferedK">
+					<div class= "cPreferedK2"></div>
+					<div class= "row">
+								<div class="col-sm-6" style="background-color:white;">
+									<canvas id="userKTrimB" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+									<canvas id="coverCanvas16" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>
+								</div>
+								<div class="col-sm-6" style="background-color:white;">
+									<canvas id="userKOther2" width="400" height="200" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+								</div>		
+					</div>
+					<section id="slider13">
+							<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="20"    data-cur_max="80">
+								<div class="leftGrip"></div>
+							</div>
+					</section>
+					<button onclick="Cprefered3()">Submit</button>
+				</div>
+			
+			</div>
+			<div id = "twoSlicesOneTrim2">
+				<div class= "twoSlicesK"></div>
+					<div class= "row">
+								<div class="col-sm-4" style="background-color:white;">
+									<canvas id="twoSliceKA" width="300" height="150" style="position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+									<canvas id="coverCanvas17" width="300" height="150" style="position: absolute; left: 0px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>
+								</div>
+								<div class="col-sm-4" style="background-color:white;">
+									<canvas id="twoSliceKB" width="300" height="150" style="position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+									<canvas id="coverCanvas18" width="300" height="150" style="position: absolute; left: 0px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>
+								</div>
+								<div class="col-sm-4" style="background-color:white;">
+									<canvas id="twoSliceKOther" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+								</div>		
+					</div>
+					<section id="slider14">
+							<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="20"    data-cur_max="80">
+											<div class="bar"></div>
+											<div class="leftGrip"></div>
+											<div class="rightGrip"></div>
+							</div>
+					</section>
+					<button onclick="twoSliceKChoice()">Submit</button>
+			<div id = "twoSlicesOneTrim3">
+				<div class= "twoSlicesJ"></div>
+					<div class= "row">
+								<div class="col-sm-6" style="background-color:white;">
+									<canvas id="twoSliceJA" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+									<canvas id="coverCanvas19" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>
+								</div>
+								<div class="col-sm-6" style="background-color:white;">
+									<canvas id="twoSliceJD" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+								</div>	
+					</div>
+					<section id="slider15">
+							<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="20"    data-cur_max="80">
+											<div class="leftGrip"></div>
+							</div>
+					</section>
+					<button onclick="twoSliceJChoice()">Submit</button>
+					
+				<div id = "twoSlicesOneTrim4">
+					<div class= "twoSlicesI"></div>
+						<div class= "row">
+									<div class="col-sm-6" style="background-color:white;">
+										<canvas id="twoSliceIB" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+										<canvas id="coverCanvas20" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>
+									</div>
+									<div class="col-sm-6" style="background-color:white;">
+										<canvas id="twoSliceIC" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+									</div>	
+						</div>
+						<section id="slider16">
+								<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="20"    data-cur_max="80">
+												<div class="leftGrip"></div>
+								</div>
+						</section>
+						<button onclick="twoSliceIChoice()">Submit</button>
+						
+						<div id = "twoSlicesOneTrim5">
+							<div class= "kChoosing"></div>
+								<div class= "row">
+											<div class="col-sm-6" style="background-color:white;">
+												<canvas id="kChoosingA" onclick = "twoSliceAlloc(1)" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+											</div>
+											<div class="col-sm-6" style="background-color:white;">
+												<canvas id="kChoosingB" onclick = "twoSliceAlloc(2)" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+											</div>	
+								</div>
+						
+						</div>
+				
+				</div>
+			
+			</div>
+			
+			
+			</div>
+			
+			<div id = "twoSlicesAllocation">
+				<div class = "row">
+							<div class="col-sm-4" style="background-color:white;">
+							<div class ="twoSlicesi"></div>
+	    					<canvas id="twoOnei" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+							</div>
+							<div class="col-sm-4" style="background-color:white;">
+							<div class ="twoSlicesj"></div>
+							<canvas id="twoOnej" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+							</div>
+							<div class="col-sm-4" style="background-color:white;">
+							<div class ="twoSlicesk"></div>
+							<canvas id="twoOnek" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+							</div>
+							<div class="col-sm-4" style="background-color:white;">
+							User 4 this is your slice
+							<canvas id="twoOne4" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+							</div>
+				</div>
+				
+
+			</div>
+		</div>
+		<div id = "threeSlicesOneTrim" >
+			<div id = "samepreference">
+				User 1 Trim your prefered slice
+				<div class= "row">
+					<div class="col-sm-6" style="background-color:white;">
+									<canvas id="same1TrimD" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+									<canvas id="coverCanvas21" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>
+								</div>
+								<div class="col-sm-6" style="background-color:white;">
+									<canvas id="same1TrimA" width="400" height="200" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+								</div>		
+					</div>
+					<section id="slider17">
+							<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="20"    data-cur_max="80">
+								<div class="leftGrip"></div>
+							</div>
+					</section>
+					<button onclick="samepreference2()">Submit</button>
+				
+				<div id = "samepreference2">
+					User 2 Trim your prefered slice
+					<div class= "row">
+						<div class="col-sm-6" style="background-color:white;">
+										<canvas id="same2TrimD" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+										<canvas id="coverCanvas22" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>
+									</div>
+									<div class="col-sm-6" style="background-color:white;">
+										<canvas id="same2TrimB" width="400" height="200" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+									</div>		
+						</div>
+						<section id="slider18">
+								<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="20"    data-cur_max="80">
+									<div class="leftGrip"></div>
+								</div>
+						</section>
+						<button onclick="samepreference3()">Submit</button>
+					<div id = "samepreference3">
+						User 2 Trim your prefered slice
+						<div class= "row">
+							<div class="col-sm-6" style="background-color:white;">
+											<canvas id="same3TrimD" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+											<canvas id="coverCanvas23" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>
+										</div>
+										<div class="col-sm-6" style="background-color:white;">
+											<canvas id="same3TrimC" width="400" height="200" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+										</div>		
+							</div>
+							<section id="slider19">
+									<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="20"    data-cur_max="80">
+										<div class="leftGrip"></div>
+									</div>
+							</section>
+							<button onclick="samepreference4()">Submit</button>
+						<div id = "samePreferenceAllocation">
+							<div class = "row">
+										<div class="col-sm-4" style="background-color:white;">
+										User 1 this is your slice
+										<canvas id="same1" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+										</div>
+										<div class="col-sm-4" style="background-color:white;">
+										User 2 this is your slice
+										<canvas id="same2" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+										</div>
+										<div class="col-sm-4" style="background-color:white;">
+										User 4 this is you slice
+										<canvas id="same3" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+										</div>
+										<div class="col-sm-4" style="background-color:white;">
+										User 4 this is your slice
+										<canvas id="same4" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+										</div>
+							</div>
+						</div>
+				
+				
+					</div>
+			
+			
+				</div>
+				
+			</div>
+			
+			<div id = "twoMustChoose2">
+				<div class = "AMustChoose"></div>
+				<div class= "row">
+					<div class="col-sm-6" style="background-color:white;">
+						<canvas id="diffATrimD" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+						<canvas id="coverCanvas24" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>
+					</div>
+					<div class="col-sm-6" style="background-color:white;">
+						<canvas id="diffATrimE" width="400" height="200" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+					</div>		
+				</div>
+				<section id="slider20">
+						<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="20"    data-cur_max="80">
+								<div class="leftGrip"></div>
+						</div>
+				</section>
+				<button onclick="twoMustChoose2()">Submit</button>
+			
+				<div id = "twoMustChoose2">
+					<div class = "BMustChoose"></div>
+					<div class= "row">
+						<div class="col-sm-6" style="background-color:white;">
+							<canvas id="diffBTrimD" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+							<canvas id="coverCanvas25" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>
+						</div>
+						<div class="col-sm-6" style="background-color:white;">
+							<canvas id="diffBTrimF" width="400" height="200" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+						</div>		
+					</div>
+					<section id="slider21">
+							<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="20"    data-cur_max="80">
+									<div class="leftGrip"></div>
+							</div>
+					</section>
+					<button onclick="twoMustChoose3()">Submit</button>
+					
+					<div id = "diffPreferenceAllocation">
+							<div class = "row">
+										<div class="col-sm-4" style="background-color:white;">
+										<div class = "userA"></div>
+										<canvas id="diffa" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+										</div>
+										<div class="col-sm-4" style="background-color:white;">
+										<div class = "userB"></div>
+										<canvas id="diffb" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+										</div>
+										<div class="col-sm-4" style="background-color:white;">
+										<div class = "userC"></div>
+										<canvas id="diffc" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+										</div>
+										<div class="col-sm-4" style="background-color:white;">
+										User 4 this is your slice
+										<canvas id="diff4" width="300" height="150" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+										</div>
+							</div>
+					</div>
+				
+				</div>
+			
+			
+			</div>
+			
+		</div>
+</body>  
+  
+  <!-- Include JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="{% static 'div/slider/dist/jquery.nstSlider.min.js' %}"></script>
+  <script src="{% static 'test.js' %}"></script>
+
+{% endblock %}

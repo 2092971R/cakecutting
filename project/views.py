@@ -22,3 +22,6 @@ def threeperson(request):
 	
 def movingknife(request):
     return render(request, 'project/movingknife.html')
+	
+def test(request):
+    return render(request, 'project/test.html')

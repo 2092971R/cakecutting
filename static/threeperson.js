@@ -275,14 +275,12 @@ function cut2(){
 
 function secondpick(number){
 	user3slice = number;
-	
 	if (number != biggest){
 			user2slice = biggest;
-			
+			lastly();
 	}else{
 		trimmed(number);
 	}
-	lastly();
 }
 
 function trimmed(number){
@@ -396,11 +394,14 @@ function thirdpick(number){
 	}else{
 		user2slice = number;
 	}
+	lastly();
 }
 
 
 function lastly(){
 	allocateslices();
+	div = document.getElementById('hide5')
+    div.style.display = "block";
 	var c = document.getElementById("user1");
 	var ctx = c.getContext("2d");
 	ctx.drawImage(img,0,0, c.width, c.height);

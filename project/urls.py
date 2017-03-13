@@ -5,5 +5,6 @@ urlpatterns = patterns('',
         url(r'^$', views.index, name='index'),
 		url(r'^twoperson/', views.twoperson, name= 'twoperson'),
 		url(r'^threeperson/', views.threeperson, name= 'threeperson'),
-		url(r'^movingknife/', views.movingknife, name= 'movingknife')
+		url(r'^movingknife/', views.movingknife, name= 'movingknife'),
+		url(r'^test/', views.test, name= 'test')
 		)
