@@ -23,5 +23,8 @@ def threeperson(request):
 def movingknife(request):
     return render(request, 'project/movingknife.html')
 	
-def test(request):
-    return render(request, 'project/test.html')
+def fourperson(request):
+    return render(request, 'project/fourperson.html')
+	
+def about(request):
+    return render(request, 'project/about.html')

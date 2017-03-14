@@ -21,16 +21,23 @@ $('.nstSlider').nstSlider({
 });
 
 function start(){
+	document.querySelector('.user1alloc').innerHTML = "User 1, this is your piece:";
+	document.querySelector('.user2alloc').innerHTML = "User 2, this is your piece:";
+
 	var thisone = document.getElementById("firstCanvas");
 	var ctx = thisone.getContext("2d");
 
 	ctx.drawImage(img,0,0, thisone.width, thisone.height);
 	
+	
 	var template = document.getElementById("shellCanvas");
 	var ctx = template.getContext("2d");
+	document.querySelector('.user1').innerHTML = "User 1 use the slider to cut the garden in half";
 }
 
 function cut(){
+	document.querySelector('.user2').innerHTML = "User 2 select which piece of the garden you prefer";
+
 	div = document.getElementById('hide')
 	div.style.display = "block";
 	
@@ -58,6 +65,15 @@ function pick(ram){
 	div = document.getElementById('hide2')
 	div.style.display = "block";
 	if (ram == 1){
+		var c=document.getElementById("myCanvas");
+        var ctx=c.getContext("2d");
+		ctx.globalAlpha = 0.25;
+		ctx.rect(0, 0, c.width, c.height);
+		ctx.lineWidth = 0;
+		ctx.fillStyle = '#007F00';
+		ctx.fill();
+		ctx.stroke;
+		
 		var e=document.getElementById("myCanvas3");
 		var ctx=e.getContext("2d");
 		ctx.drawImage(img,0,0, e.width, e.height);
@@ -76,6 +92,16 @@ function pick(ram){
 		ctx.fill();
 		ctx.stroke();
 	} else {
+		
+		var c=document.getElementById("myCanvas2");
+        var ctx=c.getContext("2d");
+		ctx.globalAlpha = 0.25;
+		ctx.rect(0, 0, c.width, c.height);
+		ctx.lineWidth = 0;
+		ctx.fillStyle = '#007F00';
+		ctx.fill();
+		ctx.stroke;
+		
 		var e=document.getElementById("myCanvas3");
 		var ctx=e.getContext("2d");
 		ctx.drawImage(img,0,0, e.width, e.height);	

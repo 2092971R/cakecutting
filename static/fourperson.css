@@ -1,0 +1,118 @@
+.nstSlider{
+   background-color: #eee;
+   width: 50%;
+    margin-top: 5px 0;
+	 margin-bottom: 5px 0;
+}
+.nstSlider .leftGrip{
+   background-color: black;
+}
+
+.nstSlider .rightGrip{
+   background-color: black;
+}
+
+button {
+	background-color: white;
+    color: black;
+    border: 2px solid #eee;
+	border-radius: 8px;
+	width: 50%;
+	 margin: 5px 0;
+}
+canvas{
+    margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+
+
+
+#hide {display: none; }
+#hide2 {display: none; }
+#hide3 {display: none; }
+#hide4 {display: none; }
+#hide5 {display: none; }
+#hide6 {display: none; }
+#hide7{display:none; }
+#twoSlicesThreeTrim{display:none;}
+#twoSlicesThreeTrim2{display:none;}
+#differentPreferences{display:none; }
+#finalAllocation{display:none; }
+#kNeed{display:none;}
+#oneSliceOneTrim{display:none; }
+#preferedPiece{display:none; }
+#preferedPiece2{display:none; }
+#preferedPieceAllocation{display:none; }
+#threeSlicesTwoTrim{display:none;}
+#dPrefered{display:none;}
+#twoSlicesOneTrim5{display:none;}
+#twoSlicesOneTrim4{display:none;}
+#twoSlicesOneTrim3{display:none;}
+#twoSlicesOneTrim2{display:none;}
+#twoSlicesOneTrim{display:none;}
+#cPreferedK{display:none;}
+#cPrefered{display:none;}
+#dPreferedK{display:none;}
+#twoSlicesAllocation{display:none;}
+#samePreferenceAllocation{display:none;}
+#samepreference3{display:none;}
+#samepreference2{display:none;}
+#samepreference{display:none;}
+#diffPreferenceAllocation{display:none;}
+#twoMustChoose2{display:none;}
+
+
+.user1{text-align: center;}
+.user2{text-align: center;}
+.user3{text-align: center;}
+.user4{text-align: center;}
+.user1alloc2{text-align: center;}
+.user2alloc2{text-align: center;}
+.user3alloc2{text-align: center;}
+.user4alloc2{text-align: center;}
+.user1twoslices{text-align: center;}
+.user2twoslices{text-align: center;}
+.user3twoslices{text-align: center;}
+.user4alloc3{text-align: center;}
+.user4alloc4{text-align: center;}
+.user4alloc5{text-align: center;}
+.user4alloc6{text-align: center;}
+.user4alloc7{text-align: center;}
+.user1same{text-align: center;}
+.user2same{text-align: center;}
+.user3same{text-align: center;}
+.AMustChoose{text-align: center;}
+.BMustChoose{text-align: center;}
+.userA{text-align: center;}
+.userB{text-align: center;}
+.userC{text-align: center;}
+.trimMe1{text-align: center;}
+.trimMe2{text-align: center;}
+.trimMe3{text-align: center;}
+.iSlice{text-align: center;}
+.jSlice{text-align: center;}
+.kSlice{text-align: center;}
+.cPreferedI{text-align: center;}
+.cPreferedK2{text-align: center;}
+.twoSlicesK{text-align: center;}
+.twoSlicesI{text-align: center;}
+.twoSliceJ{text-align: center;}
+.nSlice{text-align: center;}
+.otherSlice{text-align: center;}
+.kSlice{text-align: center;}
+.jCuts{text-align: center;}
+.kCuts{text-align: center;}
+.kChoosing{text-align: center;}
+.twoSlicesi{text-align: center;}
+.twoSlicesj{text-align: center;}
+.twoSlicesk{text-align: center;}
+.dPreferedJ{text-align: center;}
+.dPreferedK2{text-align: center;}
+.iSliceAlloc{text-align: center;}
+.kSliceAlloc{text-align: center;}
+.jSliceAlloc{text-align: center;}
+
+
+
+

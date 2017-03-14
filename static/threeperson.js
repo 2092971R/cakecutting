@@ -40,33 +40,6 @@ $("#slider1").find('.nstSlider').nstSlider({
     }
 });
 
-function killme(){
-	var thisone = document.getElementById("firstCanvas");
-	var ctx = thisone.getContext("2d");
-	ctx.drawImage(img,0,0, thisone.width, thisone.height);
-	
-	var template = document.getElementById("shellCanvas");
-	var ctx = template.getContext("2d");
-}
-
-function slice(start, end){
-	this.start = start;
-	this.end = end;
-	
-}
-
-var sliceA = new slice(0,0);
-var sliceB = new slice(0,0);
-var sliceC = new slice(0,0);
-
-var user1 = new slice(0,0);
-var user2 = new slice(0,0);
-var user3 = new slice(0,0);
-
-var biggestslice = new slice(0,0);
-var secondslice = new slice(0,0);
-
-
 
 $("#slider2").find('.nstSlider').nstSlider({
     "left_grip_selector": ".leftGrip",
@@ -94,7 +67,43 @@ $("#slider2").find('.nstSlider').nstSlider({
     }
 });
 
+function killme(){
+	console.log('here');
+	document.querySelector('.user1').innerHTML = "User 1, select where you would like to cut the cake";
+	document.querySelector('.user2').innerHTML = "User 2, click on your preferred slice and then you second-most preferred slice";
+	document.querySelector('.user2trim').innerHTML = "User 2, use the slider to trim a bit off your preferred slice so it matches your second-most preferred slice";
+	document.querySelector('.user3').innerHTML = "User 3, pick your slice";
+	document.querySelector('.user2pick').innerHTML = "User 2, pick your slice";
+	document.querySelector('.user1slice').innerHTML = "User 1, below is your slice";
+	document.querySelector('.user2slice').innerHTML = "User 2, below is your slice";
+	document.querySelector('.user3slice').innerHTML = "User 3, below is your slice";
+	var thisone = document.getElementById("firstCanvas");
+	var ctx = thisone.getContext("2d");
+	ctx.drawImage(img,0,0, thisone.width, thisone.height);
+	
+	var template = document.getElementById("shellCanvas");
+	var ctx = template.getContext("2d");
+}
+
+function slice(start, end){
+	this.start = start;
+	this.end = end;
+	
+}
+
+var sliceA = new slice(0,0);
+var sliceB = new slice(0,0);
+var sliceC = new slice(0,0);
+
+var user1 = new slice(0,0);
+var user2 = new slice(0,0);
+var user3 = new slice(0,0);
+
+var biggestslice = new slice(0,0);
+var secondslice = new slice(0,0);
+
 function cut(){
+	console.log('here');
 	sliceA.start = 0;
     sliceA.end = x;
     sliceB.start = x;

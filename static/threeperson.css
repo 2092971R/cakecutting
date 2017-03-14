@@ -1,7 +1,29 @@
 .nstSlider{
-   width: 100%;
-   color: grey;
-   background-colour: grey;
+   background-color: #eee;
+   width: 50%;
+    margin-top: 5px 0;
+	 margin-bottom: 5px 0;
+}
+.nstSlider .leftGrip{
+   background-color: black;
+}
+
+.nstSlider .rightGrip{
+   background-color: black;
+}
+
+button {
+	background-color: white;
+    color: black;
+    border: 2px solid #eee;
+	border-radius: 8px;
+	width: 50%;
+	 margin: 5px 0;
+}
+
+canvas{
+    margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 
@@ -10,3 +32,28 @@
 #hide3 {display: none; }
 #hide4 {display: none; }
 #hide5{display:none; }
+
+.user1{
+	 text-align: center;
+}
+.user2{
+	 text-align: center;
+}
+.user2trim{
+	 text-align: center;
+}
+.user3{
+	 text-align: center;
+}
+.user2pick{
+	 text-align: center;
+}
+.user1slice{
+	 text-align: center;
+}
+.user2slice{
+	 text-align: center;
+}
+.user3slice{
+	 text-align: center;
+}

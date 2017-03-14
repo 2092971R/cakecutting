@@ -6,5 +6,6 @@ urlpatterns = patterns('',
 		url(r'^twoperson/', views.twoperson, name= 'twoperson'),
 		url(r'^threeperson/', views.threeperson, name= 'threeperson'),
 		url(r'^movingknife/', views.movingknife, name= 'movingknife'),
-		url(r'^test/', views.test, name= 'test')
+		url(r'^fourperson/', views.fourperson, name= 'fourperson'),
+		url(r'^about/', views.about, name= 'about')
 		)

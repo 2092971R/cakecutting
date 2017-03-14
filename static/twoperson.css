@@ -7,13 +7,31 @@
 .nstSlider .leftGrip{
    background-color: black;
 }
-.button {
+
+button {
 	background-color: white;
     color: black;
     border: 2px solid #eee;
 	border-radius: 8px;
 	width: 50%;
 	 margin: 5px 0;
+}
+
+.user1{text-align: center;}
+
+.user2{
+	 text-align: center;
+}
+.user1alloc{
+	 text-align: center;
+}
+.user2alloc{
+	 text-align: center;
+}
+
+canvas{
+    margin-top: 10px;
+	margin-bottom: 10px;
 }
 
 #hide {display: none; }

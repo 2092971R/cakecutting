@@ -1,1 +1,51 @@
+
+
+.nstSlider{
+   background-color: #eee;
+   width: 50%;
+    margin-top: 5px 0;
+	 margin-bottom: 5px 0;
+}
+.nstSlider .leftGrip{
+   background-color: black;
+}
+
+button {
+	background-color: white;
+    color: black;
+    border: 2px solid #eee;
+	border-radius: 8px;
+	width: 50%;
+	 margin: 5px 0;
+}
+
+.user1{
+	 text-align: center;
+}
+
+.user2{
+	 text-align: center;
+}
+.user3{
+	 text-align: center;
+}
+.explain{
+	 text-align: center;
+}
+.explainone{
+	 text-align: center;
+}
+.explain2{
+	 text-align: center;
+}
+.explain3{
+	 text-align: center;
+}
+.explain4{
+	 text-align: center;
+}
 #hide{display: none; }
+canvas{
+    margin-top: 10px;
+	margin-bottom: 10px;
+}

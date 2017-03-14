@@ -40,6 +40,13 @@ $("#slider21").find('.nstSlider').nstSlider({
         var trythis = document.getElementById("coverCanvas25");
 		var ctx = trythis.getContext("2d");
 		ctx.clearRect(0, 0, trythis.width, trythis.height);
+		ctx.globalAlpha = 0.25;
+		ctx.rect(0,0,x*4,trythis.height);
+		ctx.lineWidth = 0;
+		ctx.fillStyle = '#eee';
+		ctx.fill();
+		
+		ctx.globalAlpha = 1;
 		ctx.beginPath();
 		ctx.moveTo(x*4,0);
 		ctx.lineTo(x*4,200);
@@ -59,6 +66,13 @@ $("#slider20").find('.nstSlider').nstSlider({
         var trythis = document.getElementById("coverCanvas24");
 		var ctx = trythis.getContext("2d");
 		ctx.clearRect(0, 0, trythis.width, trythis.height);
+		ctx.globalAlpha = 0.25;
+		ctx.rect(0,0,x*4,trythis.height);
+		ctx.lineWidth = 0;
+		ctx.fillStyle = '#eee';
+		ctx.fill();
+		
+		ctx.globalAlpha = 1;
 		ctx.beginPath();
 		ctx.moveTo(x*4,0);
 		ctx.lineTo(x*4,200);
@@ -78,6 +92,13 @@ $("#slider19").find('.nstSlider').nstSlider({
         var trythis = document.getElementById("coverCanvas23");
 		var ctx = trythis.getContext("2d");
 		ctx.clearRect(0, 0, trythis.width, trythis.height);
+		ctx.globalAlpha = 0.25;
+		ctx.rect(0,0,x*4,trythis.height);
+		ctx.lineWidth = 0;
+		ctx.fillStyle = '#eee';
+		ctx.fill();
+		
+		ctx.globalAlpha = 1;
 		ctx.beginPath();
 		ctx.moveTo(x*4,0);
 		ctx.lineTo(x*4,200);
@@ -96,6 +117,13 @@ $("#slider18").find('.nstSlider').nstSlider({
         var trythis = document.getElementById("coverCanvas22");
 		var ctx = trythis.getContext("2d");
 		ctx.clearRect(0, 0, trythis.width, trythis.height);
+		ctx.globalAlpha = 0.25;
+		ctx.rect(0,0,x*4,trythis.height);
+		ctx.lineWidth = 0;
+		ctx.fillStyle = '#eee';
+		ctx.fill();
+		
+		ctx.globalAlpha = 1;
 		ctx.beginPath();
 		ctx.moveTo(x*4,0);
 		ctx.lineTo(x*4,200);
@@ -115,6 +143,13 @@ $("#slider17").find('.nstSlider').nstSlider({
         var trythis = document.getElementById("coverCanvas21");
 		var ctx = trythis.getContext("2d");
 		ctx.clearRect(0, 0, trythis.width, trythis.height);
+		ctx.globalAlpha = 0.25;
+		ctx.rect(0,0,x*4,trythis.height);
+		ctx.lineWidth = 0;
+		ctx.fillStyle = '#eee';
+		ctx.fill();
+		
+		ctx.globalAlpha = 1;
 		ctx.beginPath();
 		ctx.moveTo(x*4,0);
 		ctx.lineTo(x*4,200);
@@ -134,6 +169,13 @@ $("#slider16").find('.nstSlider').nstSlider({
         var trythis = document.getElementById("coverCanvas20");
 		var ctx = trythis.getContext("2d");
 		ctx.clearRect(0, 0, trythis.width, trythis.height);
+		ctx.globalAlpha = 0.25;
+		ctx.rect(0,0,x*4,trythis.height);
+		ctx.lineWidth = 0;
+		ctx.fillStyle = '#eee';
+		ctx.fill();
+		
+		ctx.globalAlpha = 1;
 		ctx.beginPath();
 		ctx.moveTo(x*4,0);
 		ctx.lineTo(x*4,200);
@@ -153,6 +195,13 @@ $("#slider15").find('.nstSlider').nstSlider({
         var trythis = document.getElementById("coverCanvas19");
 		var ctx = trythis.getContext("2d");
 		ctx.clearRect(0, 0, trythis.width, trythis.height);
+		ctx.globalAlpha = 0.25;
+		ctx.rect(0,0,x*4,trythis.height);
+		ctx.lineWidth = 0;
+		ctx.fillStyle = '#eee';
+		ctx.fill();
+		
+		ctx.globalAlpha = 1;
 		ctx.beginPath();
 		ctx.moveTo(x*4,0);
 		ctx.lineTo(x*4,200);
@@ -174,6 +223,13 @@ $("#slider14").find('.nstSlider').nstSlider({
 		var trythis = document.getElementById("coverCanvas17");
 		var ctx = trythis.getContext("2d");
 		ctx.clearRect(0, 0, trythis.width, trythis.height);
+		ctx.globalAlpha = 0.25;
+		ctx.rect(0,0,x*4,trythis.height);
+		ctx.lineWidth = 0;
+		ctx.fillStyle = '#eee';
+		ctx.fill();
+		
+		ctx.globalAlpha = 1;
 		ctx.beginPath();
 		ctx.moveTo(x*3,0);
 		ctx.lineTo(x*3,150);
@@ -186,6 +242,13 @@ $("#slider14").find('.nstSlider').nstSlider({
 		var trythisone = document.getElementById("coverCanvas18");
 		var ctx2 = trythisone.getContext("2d");
 		ctx2.clearRect(0, 0, trythisone.width, trythisone.height);
+		ctx.globalAlpha = 0.25;
+		ctx.rect(0,0,x*4,trythis.height);
+		ctx.lineWidth = 0;
+		ctx.fillStyle = '#eee';
+		ctx.fill();
+		
+		ctx.globalAlpha = 1;
 		ctx2.beginPath();
 		ctx2.moveTo(y*3,0);
 		ctx2.lineTo(y*3,150);
@@ -204,6 +267,13 @@ $("#slider13").find('.nstSlider').nstSlider({
         var trythis = document.getElementById("coverCanvas16");
 		var ctx = trythis.getContext("2d");
 		ctx.clearRect(0, 0, trythis.width, trythis.height);
+		ctx.globalAlpha = 0.25;
+		ctx.rect(0,0,x*4,trythis.height);
+		ctx.lineWidth = 0;
+		ctx.fillStyle = '#eee';
+		ctx.fill();
+		
+		ctx.globalAlpha = 1;
 		ctx.beginPath();
 		ctx.moveTo(x*4,0);
 		ctx.lineTo(x*4,200);
@@ -223,6 +293,13 @@ $("#slider12").find('.nstSlider').nstSlider({
         var trythis = document.getElementById("coverCanvas15");
 		var ctx = trythis.getContext("2d");
 		ctx.clearRect(0, 0, trythis.width, trythis.height);
+		ctx.globalAlpha = 0.25;
+		ctx.rect(0,0,x*4,trythis.height);
+		ctx.lineWidth = 0;
+		ctx.fillStyle = '#eee';
+		ctx.fill();
+		
+		ctx.globalAlpha = 1;
 		ctx.beginPath();
 		ctx.moveTo(x*4,0);
 		ctx.lineTo(x*4,200);
@@ -242,6 +319,13 @@ $("#slider11").find('.nstSlider').nstSlider({
         var trythis = document.getElementById("coverCanvas14");
 		var ctx = trythis.getContext("2d");
 		ctx.clearRect(0, 0, trythis.width, trythis.height);
+		ctx.globalAlpha = 0.25;
+		ctx.rect(0,0,x*4,trythis.height);
+		ctx.lineWidth = 0;
+		ctx.fillStyle = '#eee';
+		ctx.fill();
+		
+		ctx.globalAlpha = 1;
 		ctx.beginPath();
 		ctx.moveTo(x*4,0);
 		ctx.lineTo(x*4,200);
@@ -261,6 +345,13 @@ $("#slider10").find('.nstSlider').nstSlider({
         var trythis = document.getElementById("coverCanvas13");
 		var ctx = trythis.getContext("2d");
 		ctx.clearRect(0, 0, trythis.width, trythis.height);
+		ctx.globalAlpha = 0.25;
+		ctx.rect(0,0,x*4,trythis.height);
+		ctx.lineWidth = 0;
+		ctx.fillStyle = '#eee';
+		ctx.fill();
+		
+		ctx.globalAlpha = 1;
 		ctx.beginPath();
 		ctx.moveTo(x*4,0);
 		ctx.lineTo(x*4,200);
@@ -280,6 +371,13 @@ $("#slider9").find('.nstSlider').nstSlider({
         var trythis = document.getElementById("coverCanvas12");
 		var ctx = trythis.getContext("2d");
 		ctx.clearRect(0, 0, trythis.width, trythis.height);
+		ctx.globalAlpha = 0.25;
+		ctx.rect(0,0,x*4,trythis.height);
+		ctx.lineWidth = 0;
+		ctx.fillStyle = '#eee';
+		ctx.fill();
+		
+		ctx.globalAlpha = 1;
 		ctx.beginPath();
 		ctx.moveTo(x*4,0);
 		ctx.lineTo(x*4,200);
@@ -299,6 +397,13 @@ $("#slider8").find('.nstSlider').nstSlider({
         var trythis = document.getElementById("coverCanvas11");
 		var ctx = trythis.getContext("2d");
 		ctx.clearRect(0, 0, trythis.width, trythis.height);
+		ctx.globalAlpha = 0.25;
+		ctx.rect(0,0,x*4,trythis.height);
+		ctx.lineWidth = 0;
+		ctx.fillStyle = '#eee';
+		ctx.fill();
+		
+		ctx.globalAlpha = 1;
 		ctx.beginPath();
 		ctx.moveTo(x*4,0);
 		ctx.lineTo(x*4,200);
@@ -320,6 +425,13 @@ $("#slider7").find('.nstSlider').nstSlider({
 		var trythis = document.getElementById("coverCanvas9");
 		var ctx = trythis.getContext("2d");
 		ctx.clearRect(0, 0, trythis.width, trythis.height);
+		ctx.globalAlpha = 0.25;
+		ctx.rect(0,0,x*4,trythis.height);
+		ctx.lineWidth = 0;
+		ctx.fillStyle = '#eee';
+		ctx.fill();
+		
+		ctx.globalAlpha = 1;
 		ctx.beginPath();
 		ctx.moveTo(x*3,0);
 		ctx.lineTo(x*3,150);
@@ -446,6 +558,13 @@ $("#slider2").find('.nstSlider').nstSlider({
         var trythis = document.getElementById("coverCanvas");
 		var ctx = trythis.getContext("2d");
 		ctx.clearRect(0, 0, trythis.width, trythis.height);
+		ctx.globalAlpha = 0.25;
+		ctx.rect(0,0,x*4,trythis.height);
+		ctx.lineWidth = 0;
+		ctx.fillStyle = '#eee';
+		ctx.fill();
+		
+		ctx.globalAlpha = 1;
 		ctx.beginPath();
 		ctx.moveTo(x*4,0);
 		ctx.lineTo(x*4,200);
@@ -465,6 +584,12 @@ $("#slider3").find('.nstSlider').nstSlider({
         var trythis2 = document.getElementById("coverCanvas2");
 		var ctx = trythis2.getContext("2d");
 		ctx.clearRect(0, 0, trythis2.width, trythis2.height);
+		ctx.globalAlpha = 0.25;
+		ctx.rect(0,0,x*4,trythis2.height);
+		ctx.lineWidth = 0;
+		ctx.fillStyle = '#eee';
+		ctx.fill();
+		ctx.globalAlpha = 1;
 		ctx.beginPath();
 		ctx.moveTo(x*4,0);
 		ctx.lineTo(x*4,200);
@@ -505,6 +630,27 @@ function start(){
 	
 	var template = document.getElementById("shellCanvas");
 	var ctx = template.getContext("2d");
+	
+	document.querySelector('.user4alloc2').innerHTML = "User 4, below is your slice";
+	document.querySelector('.user4alloc3').innerHTML = "User 4, below is your slice";
+	document.querySelector('.user4alloc4').innerHTML = "User 4, below is your slice";
+	document.querySelector('.user4alloc5').innerHTML = "User 4, below is your slice";
+	document.querySelector('.user4alloc6').innerHTML = "User 4, below is your slice";
+	document.querySelector('.user4alloc7').innerHTML = "User 4, below is your slice";
+	document.querySelector('.user1alloc2').innerHTML = "User 1, below is your slice";
+	document.querySelector('.user2alloc2').innerHTML = "User 2, below is your slice";
+	document.querySelector('.user3alloc2').innerHTML = "User 3, below is your slice";
+	document.querySelector('.user1same').innerHTML = "User 1, trim your preferred slice to match your second-most preferred";
+	document.querySelector('.user2same').innerHTML = "User 2, trim your preferred slice to match your second-most preferred";
+	document.querySelector('.user3same').innerHTML = "User 3, trim your preferred slice to match your second-most preferred";
+	document.querySelector('.user1').innerHTML = "User 1, click on the slices to rank them, starting with your most preferred";
+	document.querySelector('.user2').innerHTML = "User 2, click on the slices to rank them, starting with your most preferred";
+	document.querySelector('.user3').innerHTML = "User 3, click on the slices to rank them, starting with your most preferred";
+	document.querySelector('.user4').innerHTML = "User 4, using the slider cut the garden three times, so as to separate it into 4 pieces that you value equally";
+	document.querySelector('.user1twoslices').innerHTML = "User 1, using the slider, trim your two most preferred slices so they match your third-most preferred slice";
+	document.querySelector('.user2twoslices').innerHTML = "User 2, using the slider, trim your two most preferred slices so they match your third-most preferred slice";
+	document.querySelector('.user3twoslices').innerHTML = "User 3, using the slider, trim your two most preferred slices so they match your third-most preferred slice";
+
 }
 
 function cut(){
@@ -605,7 +751,20 @@ user3preference = [0,0,0,0];
 
 
 function rank(user, slice){
+	
 	if (user ==1){
+		var a=document.getElementById("ranking"+user.toString()+slice.toString());
+		var ctxa=a.getContext("2d");
+		ctxa.globalAlpha = 0.25;
+		ctxa.rect(0, 0, a.width, a.height);
+		ctxa.lineWidth = 0;
+		ctxa.fillStyle = '#007F00';
+		ctxa.fill();
+		ctxa.stroke;
+		ctxa.font = "100px Arial";
+		ctxa.fillStyle = '#000000';
+		ctxa.textAlign = 'center';
+		ctxa.fillText((counter1+1).toString(), (a.width / 2), 110 );
 		if(counter1 <4){
 			user1preference[counter1] = slice;
 		}
@@ -617,6 +776,18 @@ function rank(user, slice){
 		}
 	}	
 	if (user ==2){
+		var a=document.getElementById("ranking"+user.toString()+slice.toString());
+		var ctxa=a.getContext("2d");
+		ctxa.globalAlpha = 0.25;
+		ctxa.rect(0, 0, a.width, a.height);
+		ctxa.lineWidth = 0;
+		ctxa.fillStyle = '#007F00';
+		ctxa.fill();
+		ctxa.stroke;
+		ctxa.font = "100px Arial";
+		ctxa.fillStyle = '#000000';
+		ctxa.textAlign = 'center';
+		ctxa.fillText((counter2+1).toString(), (a.width / 2), 110 );
 		if(counter2 <4){
 			user2preference[counter2] = slice;
 		}
@@ -628,6 +799,18 @@ function rank(user, slice){
 		}
 	}
 	if (user ==3){
+		var a=document.getElementById("ranking"+user.toString()+slice.toString());
+		var ctxa=a.getContext("2d");
+		ctxa.globalAlpha = 0.25;
+		ctxa.rect(0, 0, a.width, a.height);
+		ctxa.lineWidth = 0;
+		ctxa.fillStyle = '#007F00';
+		ctxa.fill();
+		ctxa.stroke;
+		ctxa.font = "100px Arial";
+		ctxa.fillStyle = '#000000';
+		ctxa.textAlign = 'center';
+		ctxa.fillText((counter3+1).toString(), (a.width / 2), 110 );
 		if(counter3 <4){
 			user3preference[counter3] = slice;
 		}
@@ -755,7 +938,7 @@ function threeSlicesTwoTrim(){
 		}
 	} 
 	//now the different variables have been allocated to their appropriate bodies
-	document.querySelector('.trimMe1').innerHTML = 'User' + i + "trim your prefered slice to match your second prefered slice"
+	document.querySelector('.trimMe1').innerHTML = 'User ' + i + ", trim your preferred slice to match your second-most preferred"
 	
 	var a=document.getElementById("userITrim1");
 	var ctxa=a.getContext("2d");
@@ -787,7 +970,7 @@ function threeSlicesTwoTrim(){
 	
 	//display the cuts for k
 	
-	document.querySelector('.trimMe2').innerHTML = 'User' + k + "trim your prefered slice to match your second prefered slice"
+	document.querySelector('.trimMe2').innerHTML = 'User ' + k + ", trim your preferred slice to match your second preferred"
 	
 	var c=document.getElementById("userKTrim1");
 	var ctxc=c.getContext("2d");
@@ -819,7 +1002,7 @@ function threeSlicesTwoTrim(){
 	
 	//display cuts for j
 	
-	document.querySelector('.trimMe3').innerHTML = 'User' + j + "trim 2 prefered slices to match your third prefered slice"
+	document.querySelector('.trimMe3').innerHTML = 'User ' + j + ", trim your two preferred slices to match your third-most preferred"
 	var e=document.getElementById("userJTrim1");
 	var ctxe=e.getContext("2d");
 	ctxe.drawImage(img, 0, 0, e.width, e.height);
@@ -879,9 +1062,9 @@ function threeSlices2TrimCut2(){
 function threeSlices2TrimCut3(){
 	jCut1 = x;
 	jCut2 = y;
-	document.querySelector('.iSlice').innerHTML = 'User' + i + "this is your slice"
-	document.querySelector('.jSlice').innerHTML = 'User' + j + "this is your slice"
-	document.querySelector('.kSlice').innerHTML = 'User' + k + "this is your slice"
+	document.querySelector('.iSlice').innerHTML = 'User ' + i + " below is your slice"
+	document.querySelector('.jSlice').innerHTML = 'User ' + j + " below is your slice"
+	document.querySelector('.kSlice').innerHTML = 'User ' + k + " below is your slice"
 	if ((jCut1>iCut) && (jCut2 <kCut)){
 		div = document.getElementById('hide6');
 		div.style.display = "block";
@@ -1205,9 +1388,9 @@ function twoSlicesThreeTrim3(){
 				otherSlice = user3preference[2];
 			}
 		}
-		document.querySelector('.nSlice').innerHTML = 'User' + n + "this is your slice"
-		document.querySelector('.otherSlice').innerHTML = 'User' + other + "this is your slice"
-		document.querySelector('.kSlice').innerHTML = 'User' + k + "this is your slice"
+		document.querySelector('.nSlice').innerHTML = 'User ' + n + " below is your slice"
+		document.querySelector('.otherSlice').innerHTML = 'User ' + other + " below is your slice"
+		document.querySelector('.kSlice').innerHTML = 'User ' + k + " below is your slice"
 		finalAlloc(sliceB-1, sliceA-1, otherSlice-1, (10-sliceA-sliceB-otherSlice)-1, 'twoThree1', 'twoThree2', 'twoThree3', 'twoThree4');
 		
 	}else{
@@ -1260,9 +1443,9 @@ function kChosen(chosen){
 				otherSlice = user3preference[2];
 			}
 		}
-		document.querySelector('.nSlice').innerHTML = 'User' + m + "this is your slice"
-		document.querySelector('.otherSlice').innerHTML = 'User' + other + "this is your slice"
-		document.querySelector('.kSlice').innerHTML = 'User' + k + "this is your slice"
+		document.querySelector('.nSlice').innerHTML = 'User ' + m + "below is your slice"
+		document.querySelector('.otherSlice').innerHTML = 'User ' + other + " below is your slice"
+		document.querySelector('.kSlice').innerHTML = 'User ' + k + " below is your slice"
 		finalAlloc(sliceB-1, sliceA-1, otherSlice-1, (10-sliceA-sliceB-otherSlice)-1, 'twoThree1', 'twoThree2', 'twoThree3', 'twoThree4');
 	}else{
 		var other = 6-n-j;
@@ -1276,9 +1459,9 @@ function kChosen(chosen){
 				otherSlice = user3preference[2];
 			}
 		}
-		document.querySelector('.nSlice').innerHTML = 'User' + n + "this is your slice"
-		document.querySelector('.otherSlice').innerHTML = 'User' + other + "this is your slice"
-		document.querySelector('.kSlice').innerHTML = 'User' + j + "this is your slice"
+		document.querySelector('.nSlice').innerHTML = 'User ' + n + " below is your slice"
+		document.querySelector('.otherSlice').innerHTML = 'User ' + other + " below is your slice"
+		document.querySelector('.kSlice').innerHTML = 'User ' + j + " below is your slice"
 		finalAlloc(sliceB-1, sliceA-1, otherSlice-1, (10-sliceA-sliceB-otherSlice)-1, 'twoThree1', 'twoThree2', 'twoThree3', 'twoThree4');
 	}
 }
@@ -1406,7 +1589,7 @@ function preferedPiece(){
 		sliceC = user2preference[1];
 	
 	}
-	document.querySelector('.jCuts').innerHTML = 'User' + j + "trim the piece"
+	document.querySelector('.jCuts').innerHTML = 'User ' + j + ", using the slider, trim your preferred piece to match your second-most preferred";
 	
 	var e=document.getElementById("jCutsB");
 	var ctxe=e.getContext("2d");
@@ -1444,7 +1627,7 @@ function jCuts(){
 	jCut = x;
 	div = document.getElementById('preferedPiece2');
 	div.style.display = "block";
-	document.querySelector('.kCuts').innerHTML = 'User' + k + "trim the piece"
+	document.querySelector('.kCuts').innerHTML = 'User ' + k + ", using the slider, trim your preferred piece to match your second-most preferred";
 	var e=document.getElementById("kCutsB");
 	var ctxe=e.getContext("2d");
 	ctxe.drawImage(img, 0, 0, e.width, e.height);
@@ -1478,9 +1661,9 @@ function kCuts(){
 	div = document.getElementById('preferedPieceAllocation');
 	div.style.display = "block";
 	kCuts = x;
-	document.querySelector('.iSliceAlloc').innerHTML = 'User' + i + "this is you piece"
-	document.querySelector('.kSliceAlloc').innerHTML = 'User' + k + "this is you piece"
-	document.querySelector('.jSliceAlloc').innerHTML = 'User' + j + "this is you piece"
+	document.querySelector('.iSliceAlloc').innerHTML = 'User ' + i + " below is you piece"
+	document.querySelector('.kSliceAlloc').innerHTML = 'User ' + k + " below is you piece"
+	document.querySelector('.jSliceAlloc').innerHTML = 'User ' + j + " below is you piece"
 	if (jCuts< kCuts){
 		slice[sliceB-1].start = jCuts;
 		
@@ -1620,7 +1803,7 @@ function Dprefered(){
 	div = document.getElementById('dPrefered');
 	div.style.display = "block";
 	
-	document.querySelector('.dPreferedJ').innerHTML = 'User ' + j + " please trim your prefered piece to match your second prefered piece"
+	document.querySelector('.dPreferedJ').innerHTML = 'User ' + j + " please trim your preferred piece to match your second-most preferred";
 	
 	var a=document.getElementById("userJTrimA");
 	var ctxa=a.getContext("2d");
@@ -1658,7 +1841,7 @@ function Dprefered2(){
 	div = document.getElementById('dPreferedK');
 	div.style.display = "block";
 	
-	document.querySelector('.dPreferedK2').innerHTML = 'User ' + k + " please trim your prefered piece to match your second prefered piece"
+	document.querySelector('.dPreferedK2').innerHTML = 'User ' + k + ", trim your preferred piece to match your second-most preferred";
 	
 	var a=document.getElementById("userKTrimA");
 	var ctxa=a.getContext("2d");
@@ -1691,9 +1874,9 @@ function Dprefered2(){
 
 function Dprefered3(){
 	kcuthere = x;
-	document.querySelector('.twoSlicesi').innerHTML = 'User ' + i + " this is your slice";
-	document.querySelector('.twoSlicesj').innerHTML = 'User ' + j + " this is your slice";
-	document.querySelector('.twoSlicesk').innerHTML = 'User ' + k + " this is your slice";
+	document.querySelector('.twoSlicesi').innerHTML = 'User ' + i + " below is your slice";
+	document.querySelector('.twoSlicesj').innerHTML = 'User ' + j + " below is your slice";
+	document.querySelector('.twoSlicesk').innerHTML = 'User ' + k + " below is your slice";
 	if (kcuthere < jcuthere){
 		slice[sliceA-1].start = kcuthere;
 		finalAlloc(sliceD-1, sliceA-1, sliceB-1, sliceC-1, "twoOnei", "twoOnej", "twoOnek", "twoOne4");
@@ -1707,7 +1890,7 @@ function Cprefered(){
 	div = document.getElementById('cPrefered');
 	div.style.display = "block";
 	
-	document.querySelector('.cPreferedI').innerHTML = 'User ' + i + " please trim your prefered piece to match your second prefered piece";
+	document.querySelector('.cPreferedI').innerHTML = 'User ' + i + " trim your preferred piece to match your second-most preferred";
 	
 	var a=document.getElementById("userITrimB");
 	var ctxa=a.getContext("2d");
@@ -1744,7 +1927,7 @@ function Cprefered2(){
 	div = document.getElementById('cPreferedK');
 	div.style.display = "block";
 	
-	document.querySelector('.cPreferedK2').innerHTML = 'User ' + k + " please trim your prefered piece to match your second prefered piece"
+	document.querySelector('.cPreferedK2').innerHTML = 'User ' + k + " trim your preferred piece to match your second-most preferred"
 	
 	var a=document.getElementById("userKTrimB");
 	var ctxa=a.getContext("2d");
@@ -1779,9 +1962,9 @@ function Cprefered3(){
 	div = document.getElementById('twoSlicesAllocation');
 	div.style.display = "block";
 	kcuthere = x;
-	document.querySelector('.twoSlicesi').innerHTML = 'User ' + i + " this is your slice";
-	document.querySelector('.twoSlicesj').innerHTML = 'User ' + j + " this is your slice";
-	document.querySelector('.twoSlicesk').innerHTML = 'User ' + k + " this is your slice";
+	document.querySelector('.twoSlicesi').innerHTML = 'User ' + i + " below is your slice";
+	document.querySelector('.twoSlicesj').innerHTML = 'User ' + j + " below is your slice";
+	document.querySelector('.twoSlicesk').innerHTML = 'User ' + k + " below is your slice";
 	if (kcuthere < icuthere){
 		slice[sliceA-1].start = kcuthere;
 		finalAlloc(sliceB-1, sliceD-1, sliceA-1, sliceC-1, "twoOnei", "twoOnej", "twoOnek", "twoOne4")
@@ -1792,7 +1975,7 @@ function Cprefered3(){
 }
 
 function twoSlicesOneTrim2(){
-	document.querySelector('.twoSlicesK').innerHTML = 'User ' + k + " please trim your first and second choices slices to match your third choice slice"
+	document.querySelector('.twoSlicesK').innerHTML = 'User ' + k + " trim your two preferred slices to match your third-most preferred slice";
 	div = document.getElementById('twoSlicesOneTrim2');
 	div.style.display = "block";
 		
@@ -1858,7 +2041,7 @@ var trimIB = 0;
 function twoSliceKChoice(){
 	trimKA = x;
 	trimKB = y;
-	document.querySelector('.twoSlicesJ').innerHTML = 'User ' + j + " please trim your first choices to match your second choice slice"
+	document.querySelector('.twoSlicesJ').innerHTML = 'User ' + j + " trim your preferred slice to match your second-most preferred"
 	div = document.getElementById('twoSlicesOneTrim3');
 	div.style.display = "block";
 	
@@ -1894,7 +2077,7 @@ function twoSliceKChoice(){
 }
 function twoSliceJChoice(){
 	trimJA = x;
-	document.querySelector('.twoSlicesI').innerHTML = 'User ' + i + " please trim your first choices to match your second choice slice"
+	document.querySelector('.twoSlicesI').innerHTML = 'User ' + i + " trim your preferred slice to match your second-most preferred";
 	div = document.getElementById('twoSlicesOneTrim4');
 	div.style.display = "block";
 	
@@ -1979,7 +2162,7 @@ function twoSliceIChoice(){
 }
 
 function KMustChoose(){
-	document.querySelector('.kChoosing').innerHTML = 'User ' + k + " choose your prefered slice"
+	document.querySelector('.kChoosing').innerHTML = 'User ' + k + " choose your preferred slice"
 	div = document.getElementById('twoSlicesOneTrim5');
 	div.style.display = "block";
 	
@@ -2016,16 +2199,16 @@ function twoSliceAlloc(number){
 	if (number ==1){
 		div = document.getElementById('twoSlicesAllocation');
 		div.style.display = "block";
-		document.querySelector('.twoSlicesi').innerHTML = 'User ' + i + " this is your slice"
-		document.querySelector('.twoSlicesj').innerHTML = 'User ' + j + " this is your slice"
-		document.querySelector('.twoSlicesk').innerHTML = 'User ' + k + " this is your slice"
+		document.querySelector('.twoSlicesi').innerHTML = 'User ' + i + " below is your slice"
+		document.querySelector('.twoSlicesj').innerHTML = 'User ' + j + " below is your slice"
+		document.querySelector('.twoSlicesk').innerHTML = 'User ' + k + " below is your slice"
 		finalAlloc(sliceB-1, sliceD-1, sliceA-1, sliceC-1, "twoOnei", "twoOnej", "twoOnek", "twoOne4" );
 	}else{
 		div = document.getElementById('twoSlicesAllocation');
 		div.style.display = "block";
-		document.querySelector('.twoSlicesi').innerHTML = 'User ' + i + " this is your slice"
-		document.querySelector('.twoSlicesj').innerHTML = 'User ' + j + " this is your slice"
-		document.querySelector('.twoSlicesk').innerHTML = 'User ' + k + " this is your slice"
+		document.querySelector('.twoSlicesi').innerHTML = 'User ' + i + " below is your slice"
+		document.querySelector('.twoSlicesj').innerHTML = 'User ' + j + " below is your slice"
+		document.querySelector('.twoSlicesk').innerHTML = 'User ' + k + " below is your slice"
 		finalAlloc(sliceC-1, sliceA-1, sliceB-1, sliceD-1, "twoOnei", "twoOnej", "twoOnek", "twoOne4" );
 	}
 }
@@ -2088,7 +2271,7 @@ function twoMustChoose(){
 	}
 	div = document.getElementById('twoMustChoose');
 	div.style.display = "block";
-	document.querySelector('.AMustChoose').innerHTML = 'User ' + usera + " trim";
+	document.querySelector('.AMustChoose').innerHTML = 'User ' + usera + " trim your preferred slice to match your second-most preferred";
 	
 	var a=document.getElementById("diffATrimD");
 	var ctxa=a.getContext("2d");
@@ -2125,7 +2308,7 @@ function twoMustChoose2(){
 	ATrimD = x;
 	div = document.getElementById('twoMustChoose2');
 	div.style.display = "block";
-	document.querySelector('.BMustChoose').innerHTML = "User " + userb + " trim";
+	document.querySelector('.BMustChoose').innerHTML = "User " + userb + " trim your preferred slice to match your second-most preferred";
 	
 	var a=document.getElementById("diffBTrimD");
 	var ctxa=a.getContext("2d");
@@ -2162,9 +2345,9 @@ function twoMustChoose3(){
 	var sliceG = 10-sliceE-sliceD-sliceF;
 	div = document.getElementById('diffPreferenceAllocation');
 	div.style.display = "block";
-	document.querySelector('.userA').innerHTML = 'User ' + usera + " this is your slice";
-	document.querySelector('.userB').innerHTML = 'User ' + userb + " this is your slice";
-	document.querySelector('.userC').innerHTML = 'User ' + userc + " this is your slice";
+	document.querySelector('.userA').innerHTML = 'User ' + usera + " below is your slice";
+	document.querySelector('.userB').innerHTML = 'User ' + userb + " below is your slice";
+	document.querySelector('.userC').innerHTML = 'User ' + userc + " below is your slice";
 	if (BTrimD <ATrimD){
 		slice[sliceD-1].start = BTrimD
 		finalAlloc(sliceD-1, sliceF-1, sliceG-1, sliceE-1, "diffa", "diffb", "diffc", "diff4");

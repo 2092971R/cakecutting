@@ -18,8 +18,7 @@
 </div>
 
 <body onload="start()" >
-User 1, select where you would like to cut the cake
-
+	<div class = "user1"></div>
 	<div class="nstSlider" data-range_min="0" data-range_max="100" 
 						   data-cur_min="0">
 
@@ -28,24 +27,24 @@ User 1, select where you would like to cut the cake
 	<center><button class="button" onclick="cut()">Submit</button></center>
 	<p id="split"></p>
 	  <div id="hide">
-	  User 2, select which of the two pieces you would like
+	  <div class = "user2"></div>
 		<div class="row">
 			<div class="col-sm-6" style="background-color:white;">
-			  <canvas onclick="pick(1)"id="myCanvas" width="400" height="200" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+			  <canvas onclick="pick(1)"id="myCanvas" width="400" height="200"style="border:1px solid #000000;" >Your browser does not support the HTML5 canvas tag.</canvas>
 			</div>
 			<div class="col-sm-6" style="background-color:white;">
-			  <canvas onclick="pick(2)" id="myCanvas2" width="400" height="200" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+			  <canvas onclick="pick(2)" id="myCanvas2" width="400" height="200" style="border:1px solid #000000;">Your browser does not support the HTML5 canvas tag.</canvas>
 			</div>
 		</div>
 		<div id="hide2">
 			<div class="row">
 				<div class="col-sm-6" style="background-color:white;">
-				  User 1 this is your slice:
-				  <canvas id="myCanvas3" width="400" height="200" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+				   <div class = "user1alloc"></div>
+				  <canvas id="myCanvas3" width="400" height="200" style="border:1px solid #000000;">Your browser does not support the HTML5 canvas tag.</canvas>
 				</div>
 				<div class="col-sm-6" style="background-color:white;">
-				  User 2 this is your slice:
-				  <canvas id="myCanvas4" width="400" height="200" style="border:1px solid #ffffff;">Your browser does not support the HTML5 canvas tag.</canvas>
+				  <div class = "user2alloc"></div>
+				  <canvas id="myCanvas4" width="400" height="200" style="border:1px solid #000000;">Your browser does not support the HTML5 canvas tag.</canvas>
 				</div>
 			</div>
 		   

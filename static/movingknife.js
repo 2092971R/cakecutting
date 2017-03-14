@@ -23,24 +23,59 @@ var slice3 = new slice(0,0);
 
 function killme(){
 	
+	var trythis = document.getElementById("user3");
+	var ctx = trythis.getContext("2d");
+	ctx.clearRect(0, 0, trythis.width, trythis.height);
+    ctx.beginPath();
+	ctx.moveTo(user3*4,0);
+	ctx.lineTo(user3*4,200);
+    ctx.lineWidth = 2;
+
+      // set line color
+    ctx.strokeStyle = '#8B008B';
+    ctx.stroke();
+	
+	var trythis = document.getElementById("user2");
+	var ctx = trythis.getContext("2d");
+	ctx.clearRect(0, 0, trythis.width, trythis.height);
+    ctx.beginPath();
+	ctx.moveTo(user2*4,0);
+	ctx.lineTo(user2*4,200);
+    ctx.lineWidth = 2;
+	      // set line color
+    ctx.strokeStyle = '#FF00FF';
+    ctx.stroke();
+	
+	var trythis = document.getElementById("user1");
+	var ctx = trythis.getContext("2d");
+	ctx.clearRect(0, 0, trythis.width, trythis.height);
+    ctx.beginPath();
+	ctx.moveTo(user1*4,0);
+	ctx.lineTo(user1*4,200);
+    ctx.lineWidth = 2;
+
+      // set line color
+    ctx.strokeStyle = '#FFD700';
+    ctx.stroke();
+	
 	document.addEventListener('keydown', function(event) {
 		//1
-		if(event.keyCode == 49) {
+		if(event.keyCode == 50) {
 			stop = 1;
 			stop1();
 		}
 		//4
-		if(event.keyCode == 52) {
+		if(event.keyCode == 66) {
 			stop = 1;
 			stop2();
 		}
 		//7
-		if(event.keyCode == 55) {
+		if(event.keyCode == 56) {
 			stop = 1;
 			stop3();
 		}
 		//8
-		if(event.keyCode == 56) {
+		if(event.keyCode == 55) {
 			user3 = user3-1;
 			userthree();
 		}
@@ -50,17 +85,17 @@ function killme(){
 			userthree();
 		}
 		//5
-		if(event.keyCode == 53) {
+		if(event.keyCode == 86) {
 			user2 = user2-1;
 			usertwo();
 		}
 		//6
-		if(event.keyCode == 54) {
+		if(event.keyCode == 78) {
 			user2 = user2+1;
 			usertwo();
 		}
 		//2
-		if(event.keyCode == 50) {
+		if(event.keyCode == 49) {
 			user1 = user1-1;
 			userone();
 		}
@@ -71,6 +106,15 @@ function killme(){
 		}
 	});
 	
+	document.querySelector('.explain').innerHTML = "In the Moving Knife Procedure you each hold a 'knife' that you can move across the garden.";
+	document.querySelector('.explainone').innerHTML = "User 1, you control your knife, represented by a yellow line, with the keys 1 and 3 to move left and right.";
+	document.querySelector('.explain2').innerHTML = "User 2, you control your knife, represented by a pink line, with the keys V and N to move left and right.";
+	document.querySelector('.explain3').innerHTML = "User 3, you control your knife, represented by a purple line, with the keys 7 and 9 to move left and right.";
+	document.querySelector('.explain4').innerHTML = "A fourth knife, represented by a red line, will move slowly across the garden from the left. You must keep your knife in the middle of the portion of garden that is created by the red line and the right most edge of the garden. When you feel that the garden is being separated into 3 equal pieces by the red line and your own knife you click your 'stop' button which is 2, B and 8 for users 1, 2 and 3 respectively. When you are ready, click the start button.";
+	document.querySelector('.user1').innerHTML = "User 1 below is your piece.";
+	document.querySelector('.user2').innerHTML = "User 2 below is your piece.";
+	document.querySelector('.user3').innerHTML = "User 3 below is your piece.";
+
 	
 	var thisone = document.getElementById("firstCanvas");
 	var ctx = thisone.getContext("2d");
@@ -78,7 +122,12 @@ function killme(){
 	
 	var template = document.getElementById("shellCanvas");
 	var ctx = template.getContext("2d");
+	
 
+		
+}
+
+function move(){
 		
 	var mainCanvas = document.getElementById("secondCanvas");
 	var ctx = mainCanvas.getContext("2d");
@@ -109,7 +158,7 @@ function killme(){
 		}
 	}
 	drawCircle();
-		
+	
 }
 
 function userthree(){

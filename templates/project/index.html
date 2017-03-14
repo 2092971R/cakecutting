@@ -4,5 +4,41 @@
 {% block title %}{% endblock %}
 
 {% block body_block %}
+  <link type="text/css" rel="stylesheet" href="{% static 'div/slider/dist/jquery.nstSlider.css'%}"></link>
+  <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"></link>
+  <link href="{% static 'index.css' %}"type="text/css" rel="stylesheet" ></link>
+<body onload="start()" >
+<div class = "text"></div>
+	<div class = "row">
+		<div class="col-sm-6" style="background-color:white;">
+		  <center><a href={% url 'twoperson' %}><button  class="button">Two Person Division</button></a></center>
 
+		</div>
+		<div class="col-sm-6" style="background-color:white;">
+		  <center><a href={% url 'threeperson' %}><button class="button">Three Person Division</button></a></center>
+
+		</div>
+	
+	</div>
+	<div class = "row">
+		<div class="col-sm-6" style="background-color:white;">
+		  <center><a href={% url 'movingknife' %}><button class="button">'Moving Knife' Three Person Division</button></a></center>
+
+		</div>
+		<div class="col-sm-6" style="background-color:white;">
+		  <center><a href={% url 'fourperson' %}><button class="button">Four Person Division</button></a></center>
+
+		</div>
+	
+	</div>
+
+   
+ </body>
+  
+  
+  
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="{% static 'div/slider/dist/jquery.nstSlider.min.js' %}"></script>
+  <script src="{% static 'index.js' %}"></script>
 {% endblock %}

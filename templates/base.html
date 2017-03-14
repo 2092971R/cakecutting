@@ -28,9 +28,7 @@
         <nav>
           <ul class="nav nav-pills pull-right" style="color:#ffffff;">
             <li role="presentation"><a href={% url 'index' %}>Home</a></li>
-            <li role="presentation"><a href={% url 'twoperson' %}>2 Person Cake Cutting</a></li>
-            <li role="presentation"><a href={% url 'threeperson' %}>3 Person Cake Cutting</a></li>
-			<li role="presentation"><a href={% url 'movingknife' %}>3 Person Cake Cutting Moving Knife</a></li>
+            <li role="presentation"><a href={% url 'about' %}>About</a></li>
           </ul>
         </nav>
         <h3 class="text-muted">Cake Cutting</h3>
@@ -41,6 +39,23 @@
       </div>
 	  <div class="container-fluid">
       <div class="row">
+	  
+	  
+	  <div class="col-sm-3 col-md-2 sidebar">
+
+           <div>
+
+		    
+
+
+            {% block side_block %}
+            {% endblock %}
+			</div>
+
+        </div>
+	  
+	  
+	  
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-1 main">
            <div>
 
