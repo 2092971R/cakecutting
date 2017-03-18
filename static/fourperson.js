@@ -2320,7 +2320,6 @@ function finalChoose(slicehere){
 	div = document.getElementById('differentAllocation');
 	div.style.display = "block";
 	var add = "finalChoose";
-	console.log(add.concat(slicehere));
 	var a=document.getElementById(add.concat(slicehere));
 	var ctxa=a.getContext("2d");
 	ctxa.globalAlpha = 0.5;
@@ -2369,6 +2368,7 @@ var cprefered = 0;
 var dprefered = 0;
 
 function twoSlicesOneTrim(){
+	console.log('here');
 	div = document.getElementById('twoSlicesOneTrim');
 	div.style.display = "block";
 	var countof1 = 0;
@@ -2491,6 +2491,7 @@ function twoSlicesOneTrim(){
 }
 
 function Dprefered(){
+	console.log('here');
 	div = document.getElementById('dPrefered');
 	div.style.display = "block";
 	
@@ -2666,6 +2667,7 @@ function Cprefered3(){
 }
 
 function twoSlicesOneTrim2(){
+	console.log('here');
 	document.querySelector('.twoSlicesK').innerHTML = 'User ' + k + " trim your two preferred slices to match your third-most preferred slice";
 	div = document.getElementById('twoSlicesOneTrim2');
 	div.style.display = "block";
