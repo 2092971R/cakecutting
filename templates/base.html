@@ -11,7 +11,7 @@
     <meta name="author" content="">
     <link rel="icon" href="http://getbootstrap.com/favicon.ico">
 
-    <title>Cake Cutting - {% block title %}Cake Cutting!{% endblock %}</title>
+    <title>Cake Cutting - {% block title %}{% endblock %}</title>
 
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="http://getbootstrap.com/examples/dashboard/dashboard.css" rel="stylesheet">	
@@ -27,25 +27,24 @@
       <div class="header">
         <nav>
           <ul class="nav nav-pills pull-right" style="color:#ffffff;">
-            <li role="presentation"><a href={% url 'index' %}>Home</a></li>
-            <li role="presentation"><a href={% url 'about' %}>About</a></li>
+            <li role="presentation"><a href={% url 'index' %}><div class="text-muted"> Home</div></a></li>
+            <li role="presentation"><a href={% url 'about' %}><div class="text-muted"> About</div></a></li>
           </ul>
         </nav>
-        <h3 class="text-muted">Cake Cutting</h3>
+        <h3 class="text-muted"> Cake Cutting</h3>
       </div>
 	  <div class="jumbotron">
-        <h1>Jumbotron heading</h1>
+        <center><h1>Envy Free Cake Cutting</h1></center>
         <p class="lead"></p>
       </div>
 	  <div class="container-fluid">
       <div class="row">
 	  
 	  
-	  <div class="col-sm-3 col-md-2 sidebar">
+	  <div class="col-sm-3 col-md-2 sidebar" width="400" style="position: absolute ; left: 200px; top: 350px; z-index: 0; background-color:white; border:0px solid #FFFFFF;">
 
            <div>
 
-		    
 
 
             {% block side_block %}

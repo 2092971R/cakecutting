@@ -1,14 +1,33 @@
 {% extends 'base.html' %}
 {% load staticfiles %}
 
-{% block title %}{% endblock %}
+
+{% block title %}Two Person{% endblock %}
+
+{% block side_block %}
+
+		<ul class="legend">
+				<li><span class="Grass"></span>Grass</li><br>
+				<li><span class="Sunny"></span> Sunny</li><br>
+				<li><span class="Gravel"></span> Gravel</li><br>
+				<li><span class="Water"></span> Water</li><br>
+				<li><span class="Tree"></span> Tree</li><br>
+				<li><span class="FlowerBed"></span> Flower Bed</li><br>
+				<li><span class="Dirt"></span> Dirt</li>
+			</ul>
+
+{% endblock %}
 {% block body_block %}
   <link type="text/css" rel="stylesheet" href="{% static 'div/slider/dist/jquery.nstSlider.css'%}"></link>
   <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"></link>
   <link href="{% static 'twoperson.css' %}"type="text/css" rel="stylesheet" ></link>
 
 
-<img id='garden' src = "{%static "images/garden.jpg" %}" alt = "garden" width = 90% style="display: none;"/>
+<img id='garden2' src = "{%static "images/garden2.jpg" %}" alt = "garden2" width = 90% style="display: none;"/>
+<img id='garden3' src = "{%static "images/garden3.jpg" %}" alt = "garden3" width = 90% style="display: none;"/>
+<img id='garden4' src = "{%static "images/garden4.jpg" %}" alt = "garden4" width = 90% style="display: none;"/>
+<img id='garden5' src = "{%static "images/garden5.jpg" %}" alt = "garden5" width = 90% style="display: none;"/>
+<img id='garden6' src = "{%static "images/garden6.jpg" %}" alt = "garden6" width = 90% style="display: none;"/>
 <div id ="inner">
     <canvas id="firstCanvas" width="400" height="200" style="position: absolute; left: 275px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
     <canvas id="secondCanvas" width="400" height="200" style="position: absolute; left: 275px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>

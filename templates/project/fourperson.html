@@ -2,17 +2,37 @@
 {% load staticfiles %}
 
 {% block title %}{% endblock %}
+
+{% block side_block %}
+
+		<ul class="legend">
+				<li><span class="Grass"></span>Grass</li><br>
+				<li><span class="Sunny"></span> Sunny</li><br>
+				<li><span class="Gravel"></span> Gravel</li><br>
+				<li><span class="Water"></span> Water</li><br>
+				<li><span class="Tree"></span> Tree</li><br>
+				<li><span class="FlowerBed"></span> Flower Bed</li><br>
+				<li><span class="Dirt"></span> Dirt</li>
+			</ul>
+
+{% endblock %}
 {% block body_block %}
   <link type="text/css" rel="stylesheet" href="{% static 'div/slider/dist/jquery.nstSlider.css'%}"></link>
   <link type="text/css" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"></link>
   <link href="{% static 'fourperson.css' %}"type="text/css" rel="stylesheet" ></link>
 
 
-<img id='garden' src = "{%static "images/garden.jpg" %}" alt = "garden" width = 90% style="display: none;"/>
+<img id='garden2' src = "{%static "images/garden2.jpg" %}" alt = "garden2" width = 90% style="display: none;"/>
+<img id='garden3' src = "{%static "images/garden3.jpg" %}" alt = "garden3" width = 90% style="display: none;"/>
+<img id='garden4' src = "{%static "images/garden4.jpg" %}" alt = "garden4" width = 90% style="display: none;"/>
+<img id='garden5' src = "{%static "images/garden5.jpg" %}" alt = "garden5" width = 90% style="display: none;"/>
+<img id='garden6' src = "{%static "images/garden6.jpg" %}" alt = "garden6" width = 90% style="display: none;"/>
+
+
 <div>
-    <canvas id="firstCanvas" width="400" height="200" style="position: absolute; left: 275px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
-    <canvas id="secondCanvas" width="400" height="200" style="position: absolute; left: 275px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>
-	<canvas id="thirdCanvas" width="400" height="200" style="position: absolute; left: 275px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>
+    <canvas id="firstCanvas" width="400" height="200" style="border:1px solid #000000;position: absolute; left: 275px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+    <canvas id="secondCanvas" width="400" height="200" style="border:1px solid #000000;position: absolute; left: 275px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>
+	<canvas id="thirdCanvas" width="400" height="200" style="border:1px solid #000000;position: absolute; left: 275px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>
 </div>
 <div>
     <canvas id="shellCanvas" width="600" height="200">Your browser does not support the HTML5 canvas tag.</canvas>
@@ -87,19 +107,19 @@
 		<div id = "differentPreferences">
 			<div class = "row">
 					<div class="col-sm-4" style="background-color:white;">
-					<div class = "user1"></div>
+					<div class = "user1diff"></div>
 					  <canvas id="user1" width="300" height="150" style="border:1px solid #000000;">Your browser does not support the HTML5 canvas tag.</canvas>
 					</div>
 					<div class="col-sm-4" style="background-color:white;">
-					<div class = "user2"></div>
+					<div class = "user2diff"></div>
 					  <canvas id="user2" width="300" height="150" style="border:1px solid #000000;">Your browser does not support the HTML5 canvas tag.</canvas>
 					</div>
 					<div class="col-sm-4" style="background-color:white;">
-					<div class = "user3"></div>
+					<div class = "user3diff"></div>
 					  <canvas id="user3" width="300" height="150" style="border:1px solid #000000;">Your browser does not support the HTML5 canvas tag.</canvas>
 					</div>
 					<div class="col-sm-4" style="background-color:white;">
-					<div class = "user4"></div>
+					<div class = "user4diff"></div>
 					  <canvas id="user4" width="300" height="150" style="border:1px solid #000000;">Your browser does not support the HTML5 canvas tag.</canvas>
 					</div>
 				</div>
@@ -116,7 +136,7 @@
 					</div>	
 			</div>
 			<section id="slider2">
-						<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="10"     data-cur_max="0">
+						<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="0"     data-cur_max="0">
 							<div class="bar"></div>
 							<div class="leftGrip"></div>
 						</div>
@@ -134,7 +154,7 @@
 						</div>
 				</div>
 				<section id="slider3">
-						<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="10"     data-cur_max="0">
+						<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="0"     data-cur_max="0">
 							<div class="bar"></div>
 							<div class="leftGrip"></div>
 						</div>
@@ -156,10 +176,15 @@
 							</div>
 					</div>
 					<section id="slider4">
-						<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="20"    data-cur_max="80">
+						<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="0" >
 							<div class="bar"></div>
 							<div class="leftGrip"></div>
-							<div class="rightGrip"></div>
+						</div>
+					</section>
+					<section id="slider29">
+						<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="0" >
+							<div class="bar"></div>
+							<div class="leftGrip"></div>
 						</div>
 					</section>
 					<center><button onclick="threeSlices2TrimCut3()">Cut</button></center>
@@ -214,10 +239,17 @@
 							</div>		
 					</div>
 					<section id="slider5">
-						<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="20"    data-cur_max="80">
+						<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="0" >
 							<div class="bar"></div>
 							<div class="leftGrip"></div>
-							<div class="rightGrip"></div>
+				
+						</div>
+					</section>
+					<section id="slider30">
+						<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="0"    >
+							<div class="bar"></div>
+							<div class="leftGrip"></div>
+	
 						</div>
 					</section>
 					<center><button onclick="twoSlicesThreeTrim1()">Cut</button></center>
@@ -237,10 +269,16 @@
 									</div>
 							</div>
 							<section id="slider6">
-								<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="20"    data-cur_max="80">
+								<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="0"    >
 									<div class="bar"></div>
 									<div class="leftGrip"></div>
-									<div class="rightGrip"></div>
+								</div>
+							</section>
+							<section id="slider31">
+								<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="0"    >
+									<div class="bar"></div>
+									<div class="leftGrip"></div>
+								
 								</div>
 							</section>
 							<center><button onclick="twoSlicesThreeTrim2()">Submit</button></center>
@@ -262,10 +300,17 @@
 											</div>
 									</div>
 									<section id="slider7">
-										<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="20"    data-cur_max="80">
+										<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="0">
 											<div class="bar"></div>
 											<div class="leftGrip"></div>
-											<div class="rightGrip"></div>
+										
+										</div>
+									</section>
+									<section id="slider32">
+										<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="0" >
+											<div class="bar"></div>
+											<div class="leftGrip"></div>
+											
 										</div>
 									</section>
 									<center><button onclick="twoSlicesThreeTrim3()">Submit</button></center>
@@ -310,48 +355,45 @@
 				
 		</div>
 		<div id = "oneSliceOneTrim">
-			<div id = "preferedPiece">
-				<div class = "jCuts"></div>
-				
+			<div id="preferedPiece">
+				<div class = 'jCuts'></div>
 					<div class= "row">
 						<div class="col-sm-6" style="background-color:white;">
-								<canvas id="jCutsB" width="400" height="200" style="border:1px solid #000000;position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
-								<canvas id="coverCanvas11" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>
+							<canvas id="jCutsB" width="400" height="200" style="border:1px solid #000000;position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+							<canvas id="coverCanvas26" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>
 						</div>
 						<div class="col-sm-6" style="background-color:white;">
-								<canvas id="jCutsC" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
-				
-						</div>
-					
+							<canvas id="jCutsC" width="400" height="200" style="border:1px solid #000000;">Your browser does not support the HTML5 canvas tag.</canvas>
+						</div>	
 					</div>
-				<section id="slider8">
-					<div class="nstSlider" data-range_min="0" data-range_max="100"  data-cur_min="0">
-
+				<section id="slider22">
+						<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="0"    >
+							<div class="bar"></div>
 							<div class="leftGrip"></div>
 						</div>
 				</section>
-				<center><button onclick= "jCuts()">Cut</button></center>
+				<center><button onclick="jCuts()">Cut</button></center>
 				
 				<div id = "preferedPiece2">
-					<div class = "kCuts"></div>
+				<div class = 'kCuts'></div>
 					<div class= "row">
 						<div class="col-sm-6" style="background-color:white;">
-								<canvas id="kCutsB" width="400" height="200" style="border:1px solid #000000;position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
-								<canvas id="coverCanvas12" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>
+							<canvas id="kCutsB" width="400" height="200" style="border:1px solid #000000;position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+							<canvas id="coverCanvas27" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>
 						</div>
 						<div class="col-sm-6" style="background-color:white;">
-								<canvas id="kCutsC" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
-				
-						</div>
+							<canvas id="kCutsC" width="400" height="200" style="border:1px solid #000000;">Your browser does not support the HTML5 canvas tag.</canvas>
+						</div>	
 					</div>
-					<section id="slider9">
-						<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="20"    data-cur_max="80">
-						<div class="bar"></div>
-						<div class="leftGrip"></div>
+				<section id="slider23">
+						<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="0"    >
+							<div class="bar"></div>
+							<div class="leftGrip"></div>
 						</div>
-					</section>
-					<center><button onclick="kCuts()">Cut</button></center>
-				
+				</section>
+				<center><button onclick="kCuts()">Cut</button></center>
+
+			
 				<div id = "preferedPieceAllocation">
 						<div class = "row">
 							<div class="col-sm-4" style="background-color:white;">
@@ -372,12 +414,127 @@
 							</div>
 						</div>
 				</div>
-				
-				
+				</div>
+			</div>
+			<div id = "notPrefered">
+				<div class = 'iCuts'></div>
+					<div class= "row">
+						<div class="col-sm-6" style="background-color:white;">
+							<canvas id="iCutsB" width="400" height="200" style="border:1px solid #000000;position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+							<canvas id="coverCanvas28" width="400" height="200" style="position: absolute; left: 0px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>
+						</div>
+						<div class="col-sm-6" style="background-color:white;">
+							<canvas id="iCutsA" width="400" height="200" style="border:1px solid #000000;">Your browser does not support the HTML5 canvas tag.</canvas>
+						</div>	
+					</div>
+				<section id="slider24">
+						<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="0"    >
+							<div class="bar"></div>
+							<div class="leftGrip"></div>
+						</div>
+				</section>
+				<center><button onclick="iCuts()">Cut</button></center>
+					
+								<div id = "jCuts2">
+									<div class= "row">
+											<div class ="jCuts2"></div>
+											<div class="col-sm-4" style="background-color:white;">
+												<canvas id="jTrimB" width="300" height="150" style="border:1px solid #000000;position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+												<canvas id="coverCanvas29" width="300" height="150" style="position: absolute; left: 0px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>
+											</div>
+											<div class="col-sm-4" style="background-color:white;">
+												<canvas id="jTrimC" width="300" height="150" style="border:1px solid #000000;position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+												<canvas id="coverCanvas30" width="300" height="150" style="position: absolute; left: 0px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>
+											</div>
+											<div class="col-sm-4" style="background-color:white;">
+												<canvas id="jTrimother" width="300" height="150" style="border:1px solid #000000;">Your browser does not support the HTML5 canvas tag.</canvas>
+											</div>
+									</div>
+									<section id="slider25">
+										<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="0"    >
+											<div class="leftGrip"></div>
+										</div>
+									</section>
+									<section id="slider26">
+										<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="0" >
+											<div class="leftGrip"></div>
+										</div>
+									</section>
+									<center><button onclick="jCuts2()">Cut</button></center>
+									
+									
+									<div id = "kCuts2">
+										<div class= "row">
+												<div class ="kCuts2"></div>
+												<div class="col-sm-4" style="background-color:white;">
+													<canvas id="kTrimB" width="300" height="150" style="border:1px solid #000000;position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+													<canvas id="coverCanvas31" width="300" height="150" style="position: absolute; left: 0px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>
+												</div>
+												<div class="col-sm-4" style="background-color:white;">
+													<canvas id="kTrimC" width="300" height="150" style="border:1px solid #000000;position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+													<canvas id="coverCanvas32" width="300" height="150" style="position: absolute; left: 0px; top: 0; z-index: 2;">Your browser does not support the HTML5 canvas tag.</canvas>
+												</div>
+												<div class="col-sm-4" style="background-color:white;">
+													<canvas id="kTrimother" width="300" height="150" style="border:1px solid #000000;">Your browser does not support the HTML5 canvas tag.</canvas>
+												</div>
+										</div>
+										<section id="slider27">
+											<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="0"    data-cur_max="80">
+												<div class="leftGrip"></div>
+											</div>
+										</section>
+										<section id="slider28">
+											<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="0"    data-cur_max="80">
+												<div class="leftGrip"></div>
+											</div>
+										</section>
+										<center><button onclick="kCuts2()">Cut</button></center>
+									</div>
+									
+									<div id = "finalChoose">
+									<div class = 'finalChoose'></div>
+										<div class= "row">
+											<div class="col-sm-6" style="background-color:white;">
+												<canvas id="finalChooseB" onclick = "finalChoose('B')" width="400" height="200" style="border:1px solid #000000;position: absolute; left: 0px; top: 0; z-index: 1;">Your browser does not support the HTML5 canvas tag.</canvas>
+											</div>
+											<div class="col-sm-6" style="background-color:white;">
+												<canvas id="finalChooseC" onclick = "finalChoose('C')" width="400" height="200" style="border:1px solid #000000;">Your browser does not support the HTML5 canvas tag.</canvas>
+											</div>	
+										</div>
+									
+									
+									
+									</div>
+									
+									<div id = "differentAllocation">
+										<div class = "row">
+											<div class="col-sm-4" style="background-color:white;">
+											<div class ="iDiffAlloc"></div>
+											<canvas id="diffP1" width="300" height="150" style="border:1px solid #000000;">Your browser does not support the HTML5 canvas tag.</canvas>
+											</div>
+											<div class="col-sm-4" style="background-color:white;">
+											<div class ="kDiffAlloc"></div>
+											<canvas id="diffP2" width="300" height="150" style="border:1px solid #000000;">Your browser does not support the HTML5 canvas tag.</canvas>
+											</div>
+											<div class="col-sm-4" style="background-color:white;">
+											<div class ="jDiffAlloc"></div>
+											<canvas id="diffP3" width="300" height="150" style="border:1px solid #000000;">Your browser does not support the HTML5 canvas tag.</canvas>
+											</div>
+											<div class="col-sm-4" style="background-color:white;">
+											<div class = "fourDiffAlloc"></div>
+											<canvas id="diffP4" width="300" height="150" style="border:1px solid #000000;">Your browser does not support the HTML5 canvas tag.</canvas>
+											</div>
+										</div>
+									<div>
+									
+									
+								</div>
+			
 				</div>
 			
-			
 			</div>
+			
+	
 		</div>
 		<div id = "twoSlicesOneTrim">
 			<div id = "dPrefered">
@@ -392,7 +549,7 @@
 							</div>		
 				</div>
 				<section id="slider10">
-						<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="20"    data-cur_max="80">
+						<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="0"    data-cur_max="80">
 							<div class="leftGrip"></div>
 						</div>
 				</section>
@@ -410,7 +567,7 @@
 								</div>		
 					</div>
 					<section id="slider11">
-							<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="20"    data-cur_max="80">
+							<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="0"    data-cur_max="80">
 								<div class="leftGrip"></div>
 							</div>
 					</section>
@@ -430,7 +587,7 @@
 							</div>		
 				</div>
 				<section id="slider12">
-						<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="20"    data-cur_max="80">
+						<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="0"    data-cur_max="80">
 							<div class="leftGrip"></div>
 						</div>
 				</section>
@@ -448,7 +605,7 @@
 								</div>		
 					</div>
 					<section id="slider13">
-							<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="20"    data-cur_max="80">
+							<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="0"    data-cur_max="80">
 								<div class="leftGrip"></div>
 							</div>
 					</section>
@@ -472,10 +629,17 @@
 								</div>		
 					</div>
 					<section id="slider14">
-							<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="20"    data-cur_max="80">
+							<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="0"    data-cur_max="80">
 											<div class="bar"></div>
 											<div class="leftGrip"></div>
-											<div class="rightGrip"></div>
+										
+							</div>
+					</section>
+					<section id="slider33">
+							<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="0"    data-cur_max="80">
+											<div class="bar"></div>
+											<div class="leftGrip"></div>
+											
 							</div>
 					</section>
 					<center><button onclick="twoSliceKChoice()">Cut</button></center>
@@ -491,7 +655,7 @@
 								</div>	
 					</div>
 					<section id="slider15">
-							<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="20"    data-cur_max="80">
+							<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="0"    data-cur_max="80">
 											<div class="leftGrip"></div>
 							</div>
 					</section>
@@ -509,7 +673,7 @@
 									</div>	
 						</div>
 						<section id="slider16">
-								<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="20"    data-cur_max="80">
+								<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="0"    data-cur_max="80">
 												<div class="leftGrip"></div>
 								</div>
 						</section>
@@ -571,7 +735,7 @@
 								</div>		
 					</div>
 					<section id="slider17">
-							<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="20"    data-cur_max="80">
+							<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="0"    data-cur_max="80">
 								<div class="leftGrip"></div>
 							</div>
 					</section>
@@ -589,7 +753,7 @@
 									</div>		
 						</div>
 						<section id="slider18">
-								<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="20"    data-cur_max="80">
+								<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="0"    data-cur_max="80">
 									<div class="leftGrip"></div>
 								</div>
 						</section>
@@ -606,7 +770,7 @@
 										</div>		
 							</div>
 							<section id="slider19">
-									<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="20"    data-cur_max="80">
+									<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="0"    data-cur_max="80">
 										<div class="leftGrip"></div>
 									</div>
 							</section>
@@ -640,7 +804,7 @@
 				
 			</div>
 			
-			<div id = "twoMustChoose2">
+			<div id = "twoMustChoose">
 				<div class = "AMustChoose"></div>
 				<div class= "row">
 					<div class="col-sm-6" style="background-color:white;">
@@ -652,7 +816,7 @@
 					</div>		
 				</div>
 				<section id="slider20">
-						<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="20"    data-cur_max="80">
+						<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="0"    data-cur_max="80">
 								<div class="leftGrip"></div>
 						</div>
 				</section>
@@ -670,7 +834,7 @@
 						</div>		
 					</div>
 					<section id="slider21">
-							<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="20"    data-cur_max="80">
+							<div class="nstSlider" data-range_min="0" data-range_max="100" data-cur_min="0"    data-cur_max="80">
 									<div class="leftGrip"></div>
 							</div>
 					</section>

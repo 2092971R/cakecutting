@@ -3,10 +3,25 @@
    width: 50%;
     margin-top: 5px 0;
 	 margin-bottom: 5px 0;
+	 margin-top: 10px;
+	margin-bottom: 10px;
 }
 .nstSlider .leftGrip{
    background-color: black;
 }
+
+.legend { list-style: none; }
+.legend li { float: left; margin-right: 10px; }
+.legend span { border: 1px solid #ccc; float: left; width: 12px; height: 12px; margin: 2px; }
+/* your colors */
+.legend .Grass{ background-color: #81E79E; }
+.legend .Sunny { background-color: #FFFF91; }
+.legend .Tree{ background-color: #000000; }
+.legend .Water { background-color: #9AD9EA; }
+.legend .Gravel { background-color: #C3C3C3; }
+.legend .FlowerBed { background-color: #FF73B9; }
+.legend .Dirt { background-color: #B97A57; }
+
 
 .nstSlider .rightGrip{
    background-color: black;
@@ -37,6 +52,7 @@ canvas{
 #hide7{display:none; }
 #twoSlicesThreeTrim{display:none;}
 #twoSlicesThreeTrim2{display:none;}
+#twoSliceThreeTrim3{display:none;}
 #differentPreferences{display:none; }
 #finalAllocation{display:none; }
 #kNeed{display:none;}
@@ -61,6 +77,14 @@ canvas{
 #samepreference{display:none;}
 #diffPreferenceAllocation{display:none;}
 #twoMustChoose2{display:none;}
+#twoMustChoose{display:none;}
+#finalChoose{display:none;}
+#differentAllocation{display:none;}
+#notPrefered{display:none;}
+#jCuts2{display:none;}
+#kCuts2{display:none;}
+#twoSlicesAllocation{display:none;}
+#differentPreferences{display:none;}
 
 
 .user1{text-align: center;}
@@ -112,6 +136,10 @@ canvas{
 .iSliceAlloc{text-align: center;}
 .kSliceAlloc{text-align: center;}
 .jSliceAlloc{text-align: center;}
+.user1diff{text-align: center;}
+.user2diff{text-align: center;}
+.user3diff{text-align: center;}
+.user4diff{text-align: center;}
 
 
 

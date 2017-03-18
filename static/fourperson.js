@@ -1,5 +1,8 @@
 var x = 0;
-var img = document.getElementById("garden");
+var ran = Math.floor(Math.random() * (6 - 2 + 1)) + 2;
+var garden = "garden";
+garden = garden.concat(ran.toString());
+var img = document.getElementById(garden);
 
 var cuts = 0;
 var iCut = 0;
@@ -33,6 +36,188 @@ var slice = [new slice(0,0),new slice(0,0),new slice(0,0),new slice(0,0)];
 
 var theCuts = [0,0,0];
 
+$("#slider28").find('.nstSlider').nstSlider({
+    "left_grip_selector": ".leftGrip",
+    "value_changed_callback": function(cause, leftValue, rightValue) {
+        y = leftValue;
+        var trythis = document.getElementById("coverCanvas32");
+		var ctx = trythis.getContext("2d");
+		ctx.clearRect(0, 0, trythis.width, trythis.height);
+		ctx.globalAlpha = 0.5;
+		ctx.rect(0,0,y*3,trythis.height);
+		ctx.lineWidth = 0;
+		ctx.fillStyle = '#eee';
+		ctx.fill();
+		
+		ctx.globalAlpha = 1;
+		ctx.beginPath();
+		ctx.moveTo(y*3,0);
+		ctx.lineTo(y*3,200);
+        ctx.lineWidth = 2;
+
+      // set line color
+        ctx.strokeStyle = '#ff0000';
+		ctx.stroke();
+		
+    }
+});
+
+$("#slider27").find('.nstSlider').nstSlider({
+    "left_grip_selector": ".leftGrip",
+    "value_changed_callback": function(cause, leftValue, rightValue) {
+        x = leftValue;
+        var trythis = document.getElementById("coverCanvas31");
+		var ctx = trythis.getContext("2d");
+		ctx.clearRect(0, 0, trythis.width, trythis.height);
+		ctx.globalAlpha = 0.5;
+		ctx.rect(0,0,x*3,trythis.height);
+		ctx.lineWidth = 0;
+		ctx.fillStyle = '#eee';
+		ctx.fill();
+		
+		ctx.globalAlpha = 1;
+		ctx.beginPath();
+		ctx.moveTo(x*3,0);
+		ctx.lineTo(x*3,200);
+        ctx.lineWidth = 2;
+
+      // set line color
+        ctx.strokeStyle = '#ff0000';
+		ctx.stroke();
+		
+    }
+});
+
+$("#slider26").find('.nstSlider').nstSlider({
+    "left_grip_selector": ".leftGrip",
+    "value_changed_callback": function(cause, leftValue, rightValue) {
+        y = leftValue;
+        var trythis = document.getElementById("coverCanvas30");
+		var ctx = trythis.getContext("2d");
+		ctx.clearRect(0, 0, trythis.width, trythis.height);
+		ctx.globalAlpha = 0.5;
+		ctx.rect(0,0,y*3,trythis.height);
+		ctx.lineWidth = 0;
+		ctx.fillStyle = '#eee';
+		ctx.fill();
+		
+		ctx.globalAlpha = 1;
+		ctx.beginPath();
+		ctx.moveTo(y*3,0);
+		ctx.lineTo(y*3,200);
+        ctx.lineWidth = 2;
+
+      // set line color
+        ctx.strokeStyle = '#ff0000';
+		ctx.stroke();
+		
+    }
+});
+
+$("#slider25").find('.nstSlider').nstSlider({
+    "left_grip_selector": ".leftGrip",
+    "value_changed_callback": function(cause, leftValue, rightValue) {
+        x = leftValue;
+        var trythis = document.getElementById("coverCanvas29");
+		var ctx = trythis.getContext("2d");
+		ctx.clearRect(0, 0, trythis.width, trythis.height);
+		ctx.globalAlpha = 0.5;
+		ctx.rect(0,0,x*3,trythis.height);
+		ctx.lineWidth = 0;
+		ctx.fillStyle = '#eee';
+		ctx.fill();
+		
+		ctx.globalAlpha = 1;
+		ctx.beginPath();
+		ctx.moveTo(x*3,0);
+		ctx.lineTo(x*3,200);
+        ctx.lineWidth = 2;
+
+      // set line color
+        ctx.strokeStyle = '#ff0000';
+		ctx.stroke();
+		
+    }
+});
+
+$("#slider24").find('.nstSlider').nstSlider({
+    "left_grip_selector": ".leftGrip",
+    "value_changed_callback": function(cause, leftValue, rightValue) {
+        x = leftValue;
+        var trythis = document.getElementById("coverCanvas28");
+		var ctx = trythis.getContext("2d");
+		ctx.clearRect(0, 0, trythis.width, trythis.height);
+		ctx.globalAlpha = 0.5;
+		ctx.rect(0,0,x*4,trythis.height);
+		ctx.lineWidth = 0;
+		ctx.fillStyle = '#eee';
+		ctx.fill();
+		
+		ctx.globalAlpha = 1;
+		ctx.beginPath();
+		ctx.moveTo(x*4,0);
+		ctx.lineTo(x*4,200);
+        ctx.lineWidth = 2;
+
+      // set line color
+        ctx.strokeStyle = '#ff0000';
+		ctx.stroke();
+		
+    }
+});
+
+$("#slider23").find('.nstSlider').nstSlider({
+    "left_grip_selector": ".leftGrip",
+    "value_changed_callback": function(cause, leftValue, rightValue) {
+        x = leftValue;
+        var trythis = document.getElementById("coverCanvas27");
+		var ctx = trythis.getContext("2d");
+		ctx.clearRect(0, 0, trythis.width, trythis.height);
+		ctx.globalAlpha = 0.5;
+		ctx.rect(0,0,x*4,trythis.height);
+		ctx.lineWidth = 0;
+		ctx.fillStyle = '#eee';
+		ctx.fill();
+		
+		ctx.globalAlpha = 1;
+		ctx.beginPath();
+		ctx.moveTo(x*4,0);
+		ctx.lineTo(x*4,200);
+        ctx.lineWidth = 2;
+
+      // set line color
+        ctx.strokeStyle = '#ff0000';
+		ctx.stroke();
+		
+    }
+});
+
+$("#slider22").find('.nstSlider').nstSlider({
+    "left_grip_selector": ".leftGrip",
+    "value_changed_callback": function(cause, leftValue, rightValue) {
+        x = leftValue;
+        var trythis = document.getElementById("coverCanvas26");
+		var ctx = trythis.getContext("2d");
+		ctx.clearRect(0, 0, trythis.width, trythis.height);
+		ctx.globalAlpha = 0.5;
+		ctx.rect(0,0,x*4,trythis.height);
+		ctx.lineWidth = 0;
+		ctx.fillStyle = '#eee';
+		ctx.fill();
+		
+		ctx.globalAlpha = 1;
+		ctx.beginPath();
+		ctx.moveTo(x*4,0);
+		ctx.lineTo(x*4,200);
+        ctx.lineWidth = 2;
+
+      // set line color
+        ctx.strokeStyle = '#ff0000';
+		ctx.stroke();
+		
+    }
+});
+
 $("#slider21").find('.nstSlider').nstSlider({
     "left_grip_selector": ".leftGrip",
     "value_changed_callback": function(cause, leftValue, rightValue) {
@@ -40,7 +225,7 @@ $("#slider21").find('.nstSlider').nstSlider({
         var trythis = document.getElementById("coverCanvas25");
 		var ctx = trythis.getContext("2d");
 		ctx.clearRect(0, 0, trythis.width, trythis.height);
-		ctx.globalAlpha = 0.25;
+		ctx.globalAlpha = 0.5;
 		ctx.rect(0,0,x*4,trythis.height);
 		ctx.lineWidth = 0;
 		ctx.fillStyle = '#eee';
@@ -66,7 +251,7 @@ $("#slider20").find('.nstSlider').nstSlider({
         var trythis = document.getElementById("coverCanvas24");
 		var ctx = trythis.getContext("2d");
 		ctx.clearRect(0, 0, trythis.width, trythis.height);
-		ctx.globalAlpha = 0.25;
+		ctx.globalAlpha = 0.5;
 		ctx.rect(0,0,x*4,trythis.height);
 		ctx.lineWidth = 0;
 		ctx.fillStyle = '#eee';
@@ -92,7 +277,7 @@ $("#slider19").find('.nstSlider').nstSlider({
         var trythis = document.getElementById("coverCanvas23");
 		var ctx = trythis.getContext("2d");
 		ctx.clearRect(0, 0, trythis.width, trythis.height);
-		ctx.globalAlpha = 0.25;
+		ctx.globalAlpha = 0.5;
 		ctx.rect(0,0,x*4,trythis.height);
 		ctx.lineWidth = 0;
 		ctx.fillStyle = '#eee';
@@ -117,7 +302,7 @@ $("#slider18").find('.nstSlider').nstSlider({
         var trythis = document.getElementById("coverCanvas22");
 		var ctx = trythis.getContext("2d");
 		ctx.clearRect(0, 0, trythis.width, trythis.height);
-		ctx.globalAlpha = 0.25;
+		ctx.globalAlpha = 0.5;
 		ctx.rect(0,0,x*4,trythis.height);
 		ctx.lineWidth = 0;
 		ctx.fillStyle = '#eee';
@@ -143,7 +328,7 @@ $("#slider17").find('.nstSlider').nstSlider({
         var trythis = document.getElementById("coverCanvas21");
 		var ctx = trythis.getContext("2d");
 		ctx.clearRect(0, 0, trythis.width, trythis.height);
-		ctx.globalAlpha = 0.25;
+		ctx.globalAlpha = 0.5;
 		ctx.rect(0,0,x*4,trythis.height);
 		ctx.lineWidth = 0;
 		ctx.fillStyle = '#eee';
@@ -169,7 +354,7 @@ $("#slider16").find('.nstSlider').nstSlider({
         var trythis = document.getElementById("coverCanvas20");
 		var ctx = trythis.getContext("2d");
 		ctx.clearRect(0, 0, trythis.width, trythis.height);
-		ctx.globalAlpha = 0.25;
+		ctx.globalAlpha = 0.5;
 		ctx.rect(0,0,x*4,trythis.height);
 		ctx.lineWidth = 0;
 		ctx.fillStyle = '#eee';
@@ -195,7 +380,7 @@ $("#slider15").find('.nstSlider').nstSlider({
         var trythis = document.getElementById("coverCanvas19");
 		var ctx = trythis.getContext("2d");
 		ctx.clearRect(0, 0, trythis.width, trythis.height);
-		ctx.globalAlpha = 0.25;
+		ctx.globalAlpha = 0.5;
 		ctx.rect(0,0,x*4,trythis.height);
 		ctx.lineWidth = 0;
 		ctx.fillStyle = '#eee';
@@ -214,41 +399,21 @@ $("#slider15").find('.nstSlider').nstSlider({
     }
 });
 
-$("#slider14").find('.nstSlider').nstSlider({
+$("#slider33").find('.nstSlider').nstSlider({
     "left_grip_selector": ".leftGrip",
-    "right_grip_selector": ".rightGrip",
     "value_changed_callback": function(cause, leftValue, rightValue) {
-        x = leftValue;
-		y = rightValue;
-		var trythis = document.getElementById("coverCanvas17");
-		var ctx = trythis.getContext("2d");
-		ctx.clearRect(0, 0, trythis.width, trythis.height);
-		ctx.globalAlpha = 0.25;
-		ctx.rect(0,0,x*4,trythis.height);
-		ctx.lineWidth = 0;
-		ctx.fillStyle = '#eee';
-		ctx.fill();
-		
-		ctx.globalAlpha = 1;
-		ctx.beginPath();
-		ctx.moveTo(x*3,0);
-		ctx.lineTo(x*3,150);
-        ctx.lineWidth = 2;
-
-      // set line color
-        ctx.strokeStyle = '#ff0000';
-		ctx.stroke();
+        y = leftValue;
 		
 		var trythisone = document.getElementById("coverCanvas18");
 		var ctx2 = trythisone.getContext("2d");
 		ctx2.clearRect(0, 0, trythisone.width, trythisone.height);
-		ctx.globalAlpha = 0.25;
-		ctx.rect(0,0,x*4,trythis.height);
-		ctx.lineWidth = 0;
-		ctx.fillStyle = '#eee';
-		ctx.fill();
+		ctx2.globalAlpha = 0.5;
+		ctx2.rect(0,0,y*3,trythisone.height);
+		ctx2.lineWidth = 0;
+		ctx2.fillStyle = '#eee';
+		ctx2.fill();
 		
-		ctx.globalAlpha = 1;
+		ctx2.globalAlpha = 1;
 		ctx2.beginPath();
 		ctx2.moveTo(y*3,0);
 		ctx2.lineTo(y*3,150);
@@ -260,6 +425,8 @@ $("#slider14").find('.nstSlider').nstSlider({
     }
 });
 
+
+
 $("#slider13").find('.nstSlider').nstSlider({
     "left_grip_selector": ".leftGrip",
     "value_changed_callback": function(cause, leftValue, rightValue) {
@@ -267,7 +434,7 @@ $("#slider13").find('.nstSlider').nstSlider({
         var trythis = document.getElementById("coverCanvas16");
 		var ctx = trythis.getContext("2d");
 		ctx.clearRect(0, 0, trythis.width, trythis.height);
-		ctx.globalAlpha = 0.25;
+		ctx.globalAlpha = 0.5;
 		ctx.rect(0,0,x*4,trythis.height);
 		ctx.lineWidth = 0;
 		ctx.fillStyle = '#eee';
@@ -293,7 +460,7 @@ $("#slider12").find('.nstSlider').nstSlider({
         var trythis = document.getElementById("coverCanvas15");
 		var ctx = trythis.getContext("2d");
 		ctx.clearRect(0, 0, trythis.width, trythis.height);
-		ctx.globalAlpha = 0.25;
+		ctx.globalAlpha = 0.5;
 		ctx.rect(0,0,x*4,trythis.height);
 		ctx.lineWidth = 0;
 		ctx.fillStyle = '#eee';
@@ -319,7 +486,7 @@ $("#slider11").find('.nstSlider').nstSlider({
         var trythis = document.getElementById("coverCanvas14");
 		var ctx = trythis.getContext("2d");
 		ctx.clearRect(0, 0, trythis.width, trythis.height);
-		ctx.globalAlpha = 0.25;
+		ctx.globalAlpha = 0.5;
 		ctx.rect(0,0,x*4,trythis.height);
 		ctx.lineWidth = 0;
 		ctx.fillStyle = '#eee';
@@ -345,7 +512,7 @@ $("#slider10").find('.nstSlider').nstSlider({
         var trythis = document.getElementById("coverCanvas13");
 		var ctx = trythis.getContext("2d");
 		ctx.clearRect(0, 0, trythis.width, trythis.height);
-		ctx.globalAlpha = 0.25;
+		ctx.globalAlpha = 0.5;
 		ctx.rect(0,0,x*4,trythis.height);
 		ctx.lineWidth = 0;
 		ctx.fillStyle = '#eee';
@@ -371,7 +538,7 @@ $("#slider9").find('.nstSlider').nstSlider({
         var trythis = document.getElementById("coverCanvas12");
 		var ctx = trythis.getContext("2d");
 		ctx.clearRect(0, 0, trythis.width, trythis.height);
-		ctx.globalAlpha = 0.25;
+		ctx.globalAlpha = 0.5;
 		ctx.rect(0,0,x*4,trythis.height);
 		ctx.lineWidth = 0;
 		ctx.fillStyle = '#eee';
@@ -397,7 +564,7 @@ $("#slider8").find('.nstSlider').nstSlider({
         var trythis = document.getElementById("coverCanvas11");
 		var ctx = trythis.getContext("2d");
 		ctx.clearRect(0, 0, trythis.width, trythis.height);
-		ctx.globalAlpha = 0.25;
+		ctx.globalAlpha = 0.5;
 		ctx.rect(0,0,x*4,trythis.height);
 		ctx.lineWidth = 0;
 		ctx.fillStyle = '#eee';
@@ -416,17 +583,221 @@ $("#slider8").find('.nstSlider').nstSlider({
     }
 });
 
-$("#slider7").find('.nstSlider').nstSlider({
+$("#slider14").find('.nstSlider').nstSlider({
     "left_grip_selector": ".leftGrip",
-    "right_grip_selector": ".rightGrip",
     "value_changed_callback": function(cause, leftValue, rightValue) {
         x = leftValue;
-		y = rightValue;
+		var trythis = document.getElementById("coverCanvas17");
+		var ctx = trythis.getContext("2d");
+		ctx.clearRect(0, 0, trythis.width, trythis.height);
+		ctx.globalAlpha = 0.5;
+		ctx.rect(0,0,x*3,trythis.height);
+		ctx.lineWidth = 0;
+		ctx.fillStyle = '#eee';
+		ctx.fill();
+		
+		ctx.globalAlpha = 1;
+		ctx.beginPath();
+		ctx.moveTo(x*3,0);
+		ctx.lineTo(x*3,150);
+        ctx.lineWidth = 2;
+
+      // set line color
+        ctx.strokeStyle = '#ff0000';
+		ctx.stroke();
+	}
+});
+
+$("#slider7").find('.nstSlider').nstSlider({
+    "left_grip_selector": ".leftGrip",
+    "value_changed_callback": function(cause, leftValue, rightValue) {
+        x = leftValue;
 		var trythis = document.getElementById("coverCanvas9");
 		var ctx = trythis.getContext("2d");
 		ctx.clearRect(0, 0, trythis.width, trythis.height);
-		ctx.globalAlpha = 0.25;
-		ctx.rect(0,0,x*4,trythis.height);
+		ctx.globalAlpha = 0.5;
+		ctx.rect(0,0,x*3,trythis.height);
+		ctx.lineWidth = 0;
+		ctx.fillStyle = '#eee';
+		ctx.fill();
+		
+		ctx.globalAlpha = 1;
+		ctx.beginPath();
+		ctx.moveTo(x*3,0);
+		ctx.lineTo(x*3,150);
+        ctx.lineWidth = 2;
+
+      // set line color
+        ctx.strokeStyle = '#ff0000';
+		ctx.stroke();
+    }
+});
+
+
+$("#slider32").find('.nstSlider').nstSlider({
+    "left_grip_selector": ".leftGrip",
+
+    "value_changed_callback": function(cause, leftValue, rightValue) {
+        y = leftValue;
+		
+		var trythisone = document.getElementById("coverCanvas10");
+		var ctx2 = trythisone.getContext("2d");
+		ctx2.clearRect(0, 0, trythisone.width, trythisone.height);
+		ctx2.globalAlpha = 0.5;
+		ctx2.rect(0,0,y*3,trythisone.height);
+		ctx2.lineWidth = 0;
+		ctx2.fillStyle = '#eee';
+		ctx2.fill();
+		
+		ctx2.globalAlpha = 1;
+		ctx2.beginPath();
+		ctx2.moveTo(y*3,0);
+		ctx2.lineTo(y*3,150);
+        ctx2.lineWidth = 2;
+
+      // set line color
+        ctx2.strokeStyle = '#ff0000';
+		ctx2.stroke();
+    }
+});
+
+$("#slider31").find('.nstSlider').nstSlider({
+    "left_grip_selector": ".leftGrip",
+    "value_changed_callback": function(cause, leftValue, rightValue) {
+        y = leftValue;
+		
+		var trythisone = document.getElementById("coverCanvas8");
+		var ctx2 = trythisone.getContext("2d");
+		ctx2.clearRect(0, 0, trythisone.width, trythisone.height);
+		ctx2.globalAlpha = 0.5;
+		ctx2.rect(0,0,y*3,trythisone.height);
+		ctx2.lineWidth = 0;
+		ctx2.fillStyle = '#eee';
+		ctx2.fill();
+		
+		ctx2.globalAlpha = 1;
+		ctx2.beginPath();
+		ctx2.moveTo(y*3,0);
+		ctx2.lineTo(y*3,150);
+        ctx2.lineWidth = 2;
+
+      // set line color
+        ctx2.strokeStyle = '#ff0000';
+		ctx2.stroke();
+    }
+});
+
+$("#slider6").find('.nstSlider').nstSlider({
+    "left_grip_selector": ".leftGrip",
+    "value_changed_callback": function(cause, leftValue, rightValue) {
+        x = leftValue;
+		var trythis = document.getElementById("coverCanvas7");
+		var ctx = trythis.getContext("2d");
+		ctx.clearRect(0, 0, trythis.width, trythis.height);
+		ctx.globalAlpha = 0.5;
+		ctx.rect(0,0,x*3,trythis.height);
+		ctx.lineWidth = 0;
+		ctx.fillStyle = '#eee';
+		ctx.fill();
+		
+		ctx.globalAlpha = 1;
+		ctx.beginPath();
+		ctx.moveTo(x*3,0);
+		ctx.lineTo(x*3,150);
+        ctx.lineWidth = 2;
+
+      // set line color
+        ctx.strokeStyle = '#ff0000';
+		ctx.stroke();
+    }
+});
+
+$("#slider30").find('.nstSlider').nstSlider({
+    "left_grip_selector": ".leftGrip",
+    "value_changed_callback": function(cause, leftValue, rightValue) {
+        y = leftValue;
+		
+		var trythisonehere = document.getElementById("coverCanvas6");
+		var ctx2y = trythisonehere.getContext("2d");
+		ctx2y.clearRect(0, 0, trythisonehere.width, trythisonehere.height);
+		ctx2y.globalAlpha = 0.5;
+		ctx2y.rect(0,0,y*3,trythisonehere.height);
+		ctx2y.lineWidth = 0;
+		ctx2y.fillStyle = '#eee';
+		ctx2y.fill();
+		
+		ctx2y.globalAlpha = 1;
+		ctx2y.beginPath();
+		ctx2y.moveTo(y*3,0);
+		ctx2y.lineTo(y*3,150);
+        ctx2y.lineWidth = 2;
+
+      // set line color
+        ctx2y.strokeStyle = '#ff0000';
+		ctx2y.stroke();
+    }
+});
+
+$("#slider5").find('.nstSlider').nstSlider({
+    "left_grip_selector": ".leftGrip",
+    "value_changed_callback": function(cause, leftValue, rightValue) {
+        x = leftValue;
+		var trythishere = document.getElementById("coverCanvas5");
+		var ctxy = trythishere.getContext("2d");
+		ctxy.clearRect(0, 0, trythishere.width, trythishere.height);
+		ctxy.globalAlpha = 0.5;
+		ctxy.rect(0,0,x*3,trythishere.height);
+		ctxy.lineWidth = 0;
+		ctxy.fillStyle = '#eee';
+		ctxy.fill();
+		
+		ctxy.globalAlpha = 1;
+		ctxy.beginPath();
+		ctxy.moveTo(x*3,0);
+		ctxy.lineTo(x*3,150);
+        ctxy.lineWidth = 2;
+
+      // set line color
+        ctxy.strokeStyle = '#ff0000';
+		ctxy.stroke();
+    }
+});
+
+$("#slider29").find('.nstSlider').nstSlider({
+    "left_grip_selector": ".leftGrip",
+    "value_changed_callback": function(cause, leftValue, rightValue) {
+        y = leftValue;
+		var trythisone = document.getElementById("coverCanvas4");
+		var ctx2 = trythisone.getContext("2d");
+		ctx2.clearRect(0, 0, trythisone.width, trythisone.height);
+		ctx2.globalAlpha = 0.5;
+		ctx2.rect(0,0,y*3,trythisone.height);
+		ctx2.lineWidth = 0;
+		ctx2.fillStyle = '#eee';
+		ctx2.fill();
+		
+		ctx2.globalAlpha = 1;
+		ctx2.beginPath();
+		ctx2.moveTo(y*3,0);
+		ctx2.lineTo(y*3,150);
+        ctx2.lineWidth = 2;
+
+      // set line color
+        ctx2.strokeStyle = '#ff0000';
+		ctx2.stroke();
+		
+    }
+});
+
+$("#slider4").find('.nstSlider').nstSlider({
+    "left_grip_selector": ".leftGrip",
+    "value_changed_callback": function(cause, leftValue, rightValue) {
+        x = leftValue;
+		var trythis = document.getElementById("coverCanvas3");
+		var ctx = trythis.getContext("2d");
+		ctx.clearRect(0, 0, trythis.width, trythis.height);
+		ctx.globalAlpha = 0.5;
+		ctx.rect(0,0,x*3,trythis.height);
 		ctx.lineWidth = 0;
 		ctx.fillStyle = '#eee';
 		ctx.fill();
@@ -441,113 +812,6 @@ $("#slider7").find('.nstSlider').nstSlider({
         ctx.strokeStyle = '#ff0000';
 		ctx.stroke();
 		
-		var trythisone = document.getElementById("coverCanvas10");
-		var ctx2 = trythisone.getContext("2d");
-		ctx2.clearRect(0, 0, trythisone.width, trythisone.height);
-		ctx2.beginPath();
-		ctx2.moveTo(y*3,0);
-		ctx2.lineTo(y*3,150);
-        ctx2.lineWidth = 2;
-
-      // set line color
-        ctx2.strokeStyle = '#ff0000';
-		ctx2.stroke();
-    }
-});
-
-$("#slider6").find('.nstSlider').nstSlider({
-    "left_grip_selector": ".leftGrip",
-    "right_grip_selector": ".rightGrip",
-    "value_changed_callback": function(cause, leftValue, rightValue) {
-        x = leftValue;
-		y = rightValue;
-		var trythis = document.getElementById("coverCanvas7");
-		var ctx = trythis.getContext("2d");
-		ctx.clearRect(0, 0, trythis.width, trythis.height);
-		ctx.beginPath();
-		ctx.moveTo(x*3,0);
-		ctx.lineTo(x*3,150);
-        ctx.lineWidth = 2;
-
-      // set line color
-        ctx.strokeStyle = '#ff0000';
-		ctx.stroke();
-		
-		var trythisone = document.getElementById("coverCanvas8");
-		var ctx2 = trythisone.getContext("2d");
-		ctx2.clearRect(0, 0, trythisone.width, trythisone.height);
-		ctx2.beginPath();
-		ctx2.moveTo(y*3,0);
-		ctx2.lineTo(y*3,150);
-        ctx2.lineWidth = 2;
-
-      // set line color
-        ctx2.strokeStyle = '#ff0000';
-		ctx2.stroke();
-    }
-});
-
-$("#slider5").find('.nstSlider').nstSlider({
-    "left_grip_selector": ".leftGrip",
-    "right_grip_selector": ".rightGrip",
-    "value_changed_callback": function(cause, leftValue, rightValue) {
-        x = leftValue;
-		y = rightValue;
-		var trythishere = document.getElementById("coverCanvas5");
-		var ctxy = trythishere.getContext("2d");
-		ctxy.clearRect(0, 0, trythishere.width, trythishere.height);
-		ctxy.beginPath();
-		ctxy.moveTo(x*3,0);
-		ctxy.lineTo(x*3,150);
-        ctxy.lineWidth = 2;
-
-      // set line color
-        ctxy.strokeStyle = '#ff0000';
-		ctxy.stroke();
-		
-		var trythisonehere = document.getElementById("coverCanvas6");
-		var ctx2y = trythisonehere.getContext("2d");
-		ctx2y.clearRect(0, 0, trythisonehere.width, trythisonehere.height);
-		ctx2y.beginPath();
-		ctx2y.moveTo(y*3,0);
-		ctx2y.lineTo(y*3,150);
-        ctx2y.lineWidth = 2;
-
-      // set line color
-        ctx2y.strokeStyle = '#ff0000';
-		ctx2y.stroke();
-    }
-});
-
-$("#slider4").find('.nstSlider').nstSlider({
-    "left_grip_selector": ".leftGrip",
-    "right_grip_selector": ".rightGrip",
-    "value_changed_callback": function(cause, leftValue, rightValue) {
-        x = leftValue;
-		y = rightValue;
-		var trythis = document.getElementById("coverCanvas3");
-		var ctx = trythis.getContext("2d");
-		ctx.clearRect(0, 0, trythis.width, trythis.height);
-		ctx.beginPath();
-		ctx.moveTo(x*3,0);
-		ctx.lineTo(x*3,150);
-        ctx.lineWidth = 2;
-
-      // set line color
-        ctx.strokeStyle = '#ff0000';
-		ctx.stroke();
-		
-		var trythisone = document.getElementById("coverCanvas4");
-		var ctx2 = trythisone.getContext("2d");
-		ctx2.clearRect(0, 0, trythisone.width, trythisone.height);
-		ctx2.beginPath();
-		ctx2.moveTo(y*3,0);
-		ctx2.lineTo(y*3,150);
-        ctx2.lineWidth = 2;
-
-      // set line color
-        ctx2.strokeStyle = '#ff0000';
-		ctx2.stroke();
     }
 });
 
@@ -558,7 +822,7 @@ $("#slider2").find('.nstSlider').nstSlider({
         var trythis = document.getElementById("coverCanvas");
 		var ctx = trythis.getContext("2d");
 		ctx.clearRect(0, 0, trythis.width, trythis.height);
-		ctx.globalAlpha = 0.25;
+		ctx.globalAlpha = 0.5;
 		ctx.rect(0,0,x*4,trythis.height);
 		ctx.lineWidth = 0;
 		ctx.fillStyle = '#eee';
@@ -584,7 +848,7 @@ $("#slider3").find('.nstSlider').nstSlider({
         var trythis2 = document.getElementById("coverCanvas2");
 		var ctx = trythis2.getContext("2d");
 		ctx.clearRect(0, 0, trythis2.width, trythis2.height);
-		ctx.globalAlpha = 0.25;
+		ctx.globalAlpha = 0.5;
 		ctx.rect(0,0,x*4,trythis2.height);
 		ctx.lineWidth = 0;
 		ctx.fillStyle = '#eee';
@@ -650,7 +914,11 @@ function start(){
 	document.querySelector('.user1twoslices').innerHTML = "User 1, using the slider, trim your two most preferred slices so they match your third-most preferred slice";
 	document.querySelector('.user2twoslices').innerHTML = "User 2, using the slider, trim your two most preferred slices so they match your third-most preferred slice";
 	document.querySelector('.user3twoslices').innerHTML = "User 3, using the slider, trim your two most preferred slices so they match your third-most preferred slice";
-
+	document.querySelector('.user1diff').innerHTML = "User 1, this is your slice";
+	document.querySelector('.user2diff').innerHTML = "User 2, this is your slice";
+	document.querySelector('.user3diff').innerHTML = "User 3, this is your slice";
+	document.querySelector('.user4diff').innerHTML = "User 4, this is your slice";
+	
 }
 
 function cut(){
@@ -755,7 +1023,7 @@ function rank(user, slice){
 	if (user ==1){
 		var a=document.getElementById("ranking"+user.toString()+slice.toString());
 		var ctxa=a.getContext("2d");
-		ctxa.globalAlpha = 0.25;
+		ctxa.globalAlpha = 0.5;
 		ctxa.rect(0, 0, a.width, a.height);
 		ctxa.lineWidth = 0;
 		ctxa.fillStyle = '#007F00';
@@ -778,7 +1046,7 @@ function rank(user, slice){
 	if (user ==2){
 		var a=document.getElementById("ranking"+user.toString()+slice.toString());
 		var ctxa=a.getContext("2d");
-		ctxa.globalAlpha = 0.25;
+		ctxa.globalAlpha = 0.5;
 		ctxa.rect(0, 0, a.width, a.height);
 		ctxa.lineWidth = 0;
 		ctxa.fillStyle = '#007F00';
@@ -801,7 +1069,7 @@ function rank(user, slice){
 	if (user ==3){
 		var a=document.getElementById("ranking"+user.toString()+slice.toString());
 		var ctxa=a.getContext("2d");
-		ctxa.globalAlpha = 0.25;
+		ctxa.globalAlpha = 0.5;
 		ctxa.rect(0, 0, a.width, a.height);
 		ctxa.lineWidth = 0;
 		ctxa.fillStyle = '#007F00';
@@ -1510,6 +1778,42 @@ function oneSliceOneTrim(){
 	if(user3preference[0] == 4){
 		countof4++;
 	}
+	if(user1preference[1] == 1){
+		countof1++;
+	}
+	if(user1preference[1] == 2){
+		countof2++;
+	}
+	if(user1preference[1] == 3){
+		countof3++;
+	}
+	if(user1preference[1] == 4){
+		countof4++;
+	}
+	if(user2preference[1] == 1){
+		countof1++;
+	}
+	if(user2preference[1] == 2){
+		countof2++;
+	}
+	if(user2preference[1] == 3){
+		countof3++;
+	}
+	if(user2preference[1] == 4){
+		countof4++;
+	}
+	if(user3preference[1] == 1){
+		countof1++;
+	}
+	if(user3preference[1] == 2){
+		countof2++;
+	}
+	if(user3preference[1] == 3){
+		countof3++;
+	}
+	if(user3preference[1] == 4){
+		countof4++;
+	}
 	if (countof1 == 3){
 		sliceB = 1;
 	}else{
@@ -1536,8 +1840,21 @@ function oneSliceOneTrim(){
 			}
 		}
 	}
+	if (countof1 == 3){
+		sliceB = 1;
+	}else{
+		if (countof2 == 3){
+			sliceB = 2;
+		}else{
+			if (countof3 ==3){
+				sliceB =3;
+			}else{
+				sliceB = 4;
+			}
+		}
+	}
 	if (countof1 == 2){
-		sliceC = 1;
+		sliceC= 1;
 	}else{
 		if (countof2 == 2){
 			sliceC = 2;
@@ -1549,6 +1866,7 @@ function oneSliceOneTrim(){
 			}
 		}
 	}
+	
 	if (user1preference[0] == sliceA){
 		i = 1;
 		j = 2;
@@ -1580,14 +1898,13 @@ function preferedPiece(){
 	div = document.getElementById('preferedPiece');
 	div.style.display = "block";
 	
-	
+	//only on of the slices is the preference of j and k
 	if (i != 1){
 		sliceB = user1preference[0];
 		sliceC = user1preference[1];
 	}else{
 		sliceB = user2preference[0];
 		sliceC = user2preference[1];
-	
 	}
 	document.querySelector('.jCuts').innerHTML = 'User ' + j + ", using the slider, trim your preferred piece to match your second-most preferred";
 	
@@ -1625,6 +1942,7 @@ var jCut = 0;
 var kCut = 0;
 function jCuts(){
 	jCut = x;
+	
 	div = document.getElementById('preferedPiece2');
 	div.style.display = "block";
 	document.querySelector('.kCuts').innerHTML = 'User ' + k + ", using the slider, trim your preferred piece to match your second-most preferred";
@@ -1660,17 +1978,390 @@ function jCuts(){
 function kCuts(){
 	div = document.getElementById('preferedPieceAllocation');
 	div.style.display = "block";
-	kCuts = x;
-	document.querySelector('.iSliceAlloc').innerHTML = 'User ' + i + " below is you piece"
-	document.querySelector('.kSliceAlloc').innerHTML = 'User ' + k + " below is you piece"
-	document.querySelector('.jSliceAlloc').innerHTML = 'User ' + j + " below is you piece"
-	if (jCuts< kCuts){
-		slice[sliceB-1].start = jCuts;
+	kCut = x;
+	document.querySelector('.iSliceAlloc').innerHTML = 'User ' + i + " below is your piece"
+	document.querySelector('.kSliceAlloc').innerHTML = 'User ' + k + " below is your piece"
+	document.querySelector('.jSliceAlloc').innerHTML = 'User ' + j + " below is your piece"
+	
+	if (jCut< kCut){
+		slice[sliceB-1].start = jCut;
 		
-		finalAlloc(sliceA-1, sliceB-1, sliceC-1, (10-sliceA-sliceB-sliceC)-1, "oneOneP1", "oneOneP2", "oneOneP3", "oneOneP4")
+		finalAlloc(sliceA-1, sliceB-1, sliceC-1, (10-sliceA-sliceB-sliceC)-1, "oneOneP1", "oneOneP2", "oneOneP3", "oneOneP4");
 	}else{
-		slice[sliceB-1].start = kCuts;
-		finalAlloc(sliceA-1, sliceC-1, sliceB-1, (10-sliceA-sliceB-sliceC)-1, "oneOneP1", "oneOneP2", "oneOneP3", "oneOneP4")
+		slice[sliceB-1].start = kCut;
+		finalAlloc(sliceA-1, sliceC-1, sliceB-1, (10-sliceA-sliceB-sliceC)-1, "oneOneP1", "oneOneP2", "oneOneP3", "oneOneP4");
+	}
+}
+
+function notPreferedPiece(){
+	if (user1preference[1] == sliceA){
+		i = 1;
+		j = 2;
+		k = 3;
+	}else{
+		if(user2preference[1] == sliceA){
+			i = 2;
+			j =1;
+			k = 3;
+		}else{
+			i = 3;
+			j = 1;
+			k = 2;
+		}
+	}
+	div = document.getElementById('notPrefered');
+	div.style.display = "block";
+	
+
+	document.querySelector('.iCuts').innerHTML = 'User ' + i + ", using the slider, trim your preferred piece to match your second-most preferred";
+	var e=document.getElementById("iCutsB");
+	var ctxe=e.getContext("2d");
+	ctxe.drawImage(img, 0, 0, e.width, e.height);
+    ctxe.rect(0,0,slice[sliceB-1].start*4,e.height);
+    ctxe.lineWidth = 0;
+    ctxe.fillStyle = '#FFFFFF';
+    ctxe.fill();
+	ctxe.stroke()
+	ctxe.rect(slice[sliceB-1].end*4,0,e.width,e.height);
+    ctxe.lineWidth = 0;
+    ctxe.fillStyle = '#FFFFFF';
+    ctxe.fill();
+    ctxe.stroke();
+	
+	var f=document.getElementById("iCutsA");
+	var ctxf=f.getContext("2d");
+	ctxf.drawImage(img, 0, 0, f.width, f.height);
+    ctxf.rect(0,0,slice[sliceA-1].start*4,f.height);
+    ctxf.lineWidth = 0;
+    ctxf.fillStyle = '#FFFFFF';
+    ctxf.fill();
+	ctxf.stroke()
+	ctxf.rect(slice[sliceA-1].end*4,0,f.width,f.height);
+    ctxf.lineWidth = 0;
+    ctxf.fillStyle = '#FFFFFF';
+    ctxf.fill();
+    ctxf.stroke();
+	
+}
+var iCutsB =0;
+var jCutsB =0;
+var jCutsC =0;
+var kCutsB =0;
+var kCutsC =0;
+
+
+function iCuts(){
+	iCutsB = x;
+	div = document.getElementById('jCuts2');
+	div.style.display = "block";
+	
+	var other = 0;
+	if (j ==1){
+		other = user1preference[2];
+	}else{
+		if (j==2){
+			other = user2preference[2];
+		}else{
+			other = user3preference[2];
+		}
+	}
+	
+	var b=document.getElementById("jTrimB");
+	var ctxb=b.getContext("2d");
+	ctxb.drawImage(img, 0, 0, b.width, b.height);
+    ctxb.rect(0,0,slice[sliceB -1].start*3,b.height);
+    ctxb.lineWidth = 0;
+    ctxb.fillStyle = '#FFFFFF';
+    ctxb.fill();
+	ctxb.stroke()
+	ctxb.rect(slice[sliceB-1].end*3,0,b.width,b.height);
+    ctxb.lineWidth = 0;
+    ctxb.fillStyle = '#FFFFFF';
+    ctxb.fill();
+    ctxb.stroke();
+	
+	document.querySelector('.jCuts2').innerHTML = 'User ' + j + ", using the sliders, trim two preferred pieces to match your third-most preferred";
+	var e=document.getElementById("jTrimC");
+	var ctxe=e.getContext("2d");
+	ctxe.drawImage(img, 0, 0, e.width, e.height);
+    ctxe.rect(0,0,slice[sliceC-1].start*3,e.height);
+    ctxe.lineWidth = 0;
+    ctxe.fillStyle = '#FFFFFF';
+    ctxe.fill();
+	ctxe.stroke()
+	ctxe.rect(slice[sliceC-1].end*3,0,e.width,e.height);
+    ctxe.lineWidth = 0;
+    ctxe.fillStyle = '#FFFFFF';
+    ctxe.fill();
+    ctxe.stroke();
+	
+	var f=document.getElementById("jTrimother");
+	var ctxf=f.getContext("2d");
+	ctxf.drawImage(img, 0, 0, f.width, f.height);
+    ctxf.rect(0,0,slice[other-1].start*4,f.height);
+    ctxf.lineWidth = 0;
+    ctxf.fillStyle = '#FFFFFF';
+    ctxf.fill();
+	ctxf.stroke()
+	ctxf.rect(slice[other-1].end*3,0,f.width,f.height);
+    ctxf.lineWidth = 0;
+    ctxf.fillStyle = '#FFFFFF';
+    ctxf.fill();
+    ctxf.stroke();
+}
+
+function jCuts2(){
+	jCutsB = x;
+	jCutsC =y;
+	
+	div = document.getElementById('kCuts2');
+	div.style.display = "block";
+	
+	var other = 0;
+	if (k ==1){
+		other = user1preference[2];
+	}else{
+		if (k==2){
+			other = user2preference[2];
+		}else{
+			other = user3preference[2];
+		}
+	}
+	
+	var b=document.getElementById("kTrimB");
+	var ctxb=b.getContext("2d");
+	ctxb.drawImage(img, 0, 0, b.width, b.height);
+    ctxb.rect(0,0,slice[sliceB -1].start*3,b.height);
+    ctxb.lineWidth = 0;
+    ctxb.fillStyle = '#FFFFFF';
+    ctxb.fill();
+	ctxb.stroke()
+	ctxb.rect(slice[sliceB-1].end*3,0,b.width,b.height);
+    ctxb.lineWidth = 0;
+    ctxb.fillStyle = '#FFFFFF';
+    ctxb.fill();
+    ctxb.stroke();
+	
+	document.querySelector('.kCuts2').innerHTML = 'User ' + k + ", using the sliders, trim two preferred pieces to match your third-most preferred";
+	var e=document.getElementById("kTrimC");
+	var ctxe=e.getContext("2d");
+	ctxe.drawImage(img, 0, 0, e.width, e.height);
+    ctxe.rect(0,0,slice[sliceC-1].start*3,e.height);
+    ctxe.lineWidth = 0;
+    ctxe.fillStyle = '#FFFFFF';
+    ctxe.fill();
+	ctxe.stroke()
+	ctxe.rect(slice[sliceC-1].end*3,0,e.width,e.height);
+    ctxe.lineWidth = 0;
+    ctxe.fillStyle = '#FFFFFF';
+    ctxe.fill();
+    ctxe.stroke();
+	
+	var f=document.getElementById("kTrimother");
+	var ctxf=f.getContext("2d");
+	ctxf.drawImage(img, 0, 0, f.width, f.height);
+    ctxf.rect(0,0,slice[other-1].start*3,f.height);
+    ctxf.lineWidth = 0;
+    ctxf.fillStyle = '#FFFFFF';
+    ctxf.fill();
+	ctxf.stroke()
+	ctxf.rect(slice[other-1].end*3,0,f.width,f.height);
+    ctxf.lineWidth = 0;
+    ctxf.fillStyle = '#FFFFFF';
+    ctxf.fill();
+    ctxf.stroke()
+	
+}
+var m = 0;
+
+function kCuts2(){
+	kCutsB = x;
+	kCutsC = y;
+	var jother = 0;
+	var kother = 0;
+	if (j ===1){
+		jother = user1preference[2];
+	}
+	if (j ===2){
+		jother = user2preference[2];
+	}
+	if (j ===3){
+		jother = user3preference[2];
+	}
+	if (j ===4){
+		jother = user4preference[2];
+	}
+	if (k ===1){
+		kother = user1preference[2];
+	}
+	if (k ===2){
+		kother = user2preference[2];
+	}
+	if (k ===3){
+		kother = user3preference[2];
+	}
+	if (k ===4){
+		kother = user4preference[2];
+	}
+	
+	//find the cuts for the slices
+	if (kCutsC<jCutsC){
+		slice[sliceC-1].start = kCutsC;
+	}else{
+		slice[sliceC-1].start = jCutsC;
+	}
+	if ((jCutsB<kCutsB) && (jCutsB<iCutsB)){
+		if(kCutsB<iCutsB){
+			slice[sliceB-1].start = kCutsB;
+		}else{
+			slice[sliceB-1].start = iCutsB;
+		}
+	}else{
+		if ((jCutsB>kCutsB)||(jCutsB>iCutsB)){
+			slice[sliceB-1].start = jCutsB;
+		}else{
+			if(kCutsB>iCutsB){
+				slice[sliceB-1].start = kCutsB;
+			}else{
+				slice[sliceB-1].start = iCutsB;
+			}
+		}
+		
+	}
+	
+	
+	
+	document.querySelector('.iDiffAlloc').innerHTML = 'User ' + i + " below is your piece"
+	document.querySelector('.kDiffAlloc').innerHTML = 'User ' + k + " below is your piece"
+	document.querySelector('.jDiffAlloc').innerHTML = 'User ' + j + " below is your piece"
+	document.querySelector('.fourDiffAlloc').innerHTML = 'User ' + '4' + " below is your piece"
+	if (jCutsC<kCutsC){
+		if((kCutsB>jCutsC)&&(kCutsB>iCutsB)){
+			m = 'k';
+			choose();
+		}else{
+			div = document.getElementById('differentAllocation');
+			div.style.display = "block";
+			if(jCutsB<iCutsB){
+				//allocate k to C, i to B and j to their third choice
+				finalAlloc(sliceB-1, sliceC-1, jother-1, (10-jother-sliceB-sliceC)-1, "diffP1", "diffP2", "diffP3", "diffP4");
+				
+			}else{
+				//allocate k to C, j to B and i to A 
+				finalAlloc(sliceA-1, sliceC-1, sliceB-1, (10-sliceA-sliceB-sliceC)-1, "diffP1", "diffP2", "diffP3", "diffP4");
+
+			}
+		}
+		
+	}else{
+		if((jCutsB>kCutsB)&&(jCutsB>iCutsB)){
+			m = 'j';
+			choose();
+		}else{
+			div = document.getElementById('differentAllocation');
+			div.style.display = "block";
+			if(kCutsB<iCutsB){
+				finalAlloc(sliceB-1, kother-1, sliceC-1, (10-kother-sliceB-sliceC)-1, "diffP1", "diffP2", "diffP3", "diffP4");
+
+				// j gets C, i gets B and k get third choice
+			}else{
+				finalAlloc(sliceA-1, sliceB-1, sliceC-1, (10-sliceA-sliceB-sliceC)-1, "diffP1", "diffP2", "diffP3", "diffP4");
+
+				//j gets C, k gets B and i gets A 
+			}
+		}		
+		
+	}
+	
+	
+	
+}
+
+function choose(agent){
+	div = document.getElementById('finalChoose');
+	div.style.display = "block";
+
+	if (m == 'j'){
+		document.querySelector('.finalChoose').innerHTML = 'User ' + j + ", pick your most preferred slice between the two below";	
+	}else{
+		document.querySelector('.finalChoose').innerHTML = 'User ' + k + ", pick your most preferred slice between the two below";	
+	}
+	var e=document.getElementById("finalChooseB");
+	var ctxe=e.getContext("2d");
+	ctxe.drawImage(img, 0, 0, e.width, e.height);
+    ctxe.rect(0,0,slice[sliceB-1].start*4,e.height);
+    ctxe.lineWidth = 0;
+    ctxe.fillStyle = '#FFFFFF';
+    ctxe.fill();
+	ctxe.stroke()
+	ctxe.rect(slice[sliceB-1].end*4,0,e.width,e.height);
+    ctxe.lineWidth = 0;
+    ctxe.fillStyle = '#FFFFFF';
+    ctxe.fill();
+    ctxe.stroke();
+	
+	var f=document.getElementById("finalChooseC");
+	var ctxf=f.getContext("2d");
+	ctxf.drawImage(img, 0, 0, f.width, f.height);
+    ctxf.rect(0,0,slice[sliceC-1].start*4,f.height);
+    ctxf.lineWidth = 0;
+    ctxf.fillStyle = '#FFFFFF';
+    ctxf.fill();
+	ctxf.stroke()
+	ctxf.rect(slice[sliceC-1].end*4,0,f.width,f.height);
+    ctxf.lineWidth = 0;
+    ctxf.fillStyle = '#FFFFFF';
+    ctxf.fill();
+    ctxf.stroke()
+	
+}
+
+function finalChoose(slicehere){
+	div = document.getElementById('differentAllocation');
+	div.style.display = "block";
+	var add = "finalChoose";
+	console.log(add.concat(slicehere));
+	var a=document.getElementById(add.concat(slicehere));
+	var ctxa=a.getContext("2d");
+	ctxa.globalAlpha = 0.5;
+	ctxa.rect(0, 0, a.width, a.height);
+	ctxa.lineWidth = 0;
+	ctxa.fillStyle = '#007F00';
+	ctxa.fill();
+	if (slicehere == 'B'){
+		if (m == 'j'){
+			//j gets B, i gets A and k gets C 
+			finalAlloc(sliceA-1, sliceC-1, sliceB-1, (10-sliceA-sliceB-sliceC)-1, "diffP1", "diffP2", "diffP3", "diffP4");
+
+		}else{
+			finalAlloc(sliceA-1, sliceB-1, sliceC-1, (10-sliceA-sliceB-sliceC)-1, "diffP1", "diffP2", "diffP3", "diffP4");
+			//k gets B, i gets A and j gets C
+		}
+	}else{
+		if (m=='j'){
+			//j gets c, 
+			if (kCutsB>iCutsB){
+				finalAlloc(sliceA-1, sliceB-1, sliceC-1, (10-sliceA-sliceB-sliceC)-1, "diffP1", "diffP2", "diffP3", "diffP4");
+
+				//k gets B and i gets A
+			}else{
+				finalAlloc(sliceB-1, kother-1, sliceC-1, (10-kother-sliceB-sliceC)-1, "diffP1", "diffP2", "diffP3", "diffP4");
+
+				//i gets B and k gets kother
+			}
+		}else{
+			//k gets c
+			if (jCutsB>iCutsB){
+				finalAlloc(sliceA-1, sliceC-1, sliceB-1, (10-sliceA-sliceB-sliceC)-1, "diffP1", "diffP2", "diffP3", "diffP4");
+
+				//j gets B and i gets A
+			}else{
+				finalAlloc(sliceB-1, sliceC-1, jother-1, (10-jother-sliceB-sliceC)-1, "diffP1", "diffP2", "diffP3", "diffP4");
+
+				//i gets B and j gets jother
+			}
+		}
+		
 	}
 }
 
@@ -2432,6 +3123,7 @@ function samepreference3(){
 	twoTrimHere = x;
 	div = document.getElementById('samepreference3');
 	div.style.display = "block";
+	
 	
 	var a=document.getElementById("same3TrimD");
 	var ctxa=a.getContext("2d");

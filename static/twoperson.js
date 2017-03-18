@@ -1,5 +1,8 @@
 var x = 0;
-var img = document.getElementById("garden");
+var ran = Math.floor(Math.random() * (6 - 2 + 1)) + 2;
+var garden = "garden";
+garden = garden.concat(ran.toString());
+var img = document.getElementById(garden);
 
 $('.nstSlider').nstSlider({
     "left_grip_selector": ".leftGrip",

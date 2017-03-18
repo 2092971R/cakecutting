@@ -3,10 +3,25 @@ var y = 0;
 var z = 0;
 var biggest = 0;
 var second = 0;
-var img = document.getElementById("garden");
+var ran = Math.floor(Math.random() * (6 - 2 + 1)) + 2;
+var garden = "garden";
+garden = garden.concat(ran.toString());
+var img = document.getElementById(garden);
 var user1slice = 0;
 var user2slice = 0;
 var user3slice = 0;
+
+
+var sliceA = new slice(0,0);
+var sliceB = new slice(0,0);
+var sliceC = new slice(0,0);
+
+var user1 = new slice(0,0);
+var user2 = new slice(0,0);
+var user3 = new slice(0,0);
+
+var biggestslice = new slice(0,0);
+var secondslice = new slice(0,0);
 
 $("#slider1").find('.nstSlider').nstSlider({
     "left_grip_selector": ".leftGrip",
@@ -45,17 +60,19 @@ $("#slider2").find('.nstSlider').nstSlider({
     "left_grip_selector": ".leftGrip",
     "value_bar_selector": ".bar",
     "value_changed_callback": function(cause, leftValue, rightValue) {
-        var $container = $(this).parent(),
-            g = 255,
-            r = 255,
-            b = 0;
-        $container.find('.leftLabel').text(leftValue);
-        $(this).find('.bar').css('background', 'rgb(' + [r, g, b].join(',') + ')');
-		z = leftValue;
+
+	z = leftValue;
 		
 	var line = document.getElementById("coverCanvas");
 	var ctx2 = line.getContext("2d");
 	ctx2.clearRect(0, 0, line.width, line.height);
+	ctx2.globalAlpha = 0.25;
+	ctx2.rect(0,0,biggestslice.start*4 + (((biggestslice.end-biggestslice.start)*4)/(100/z)),line.height);
+	ctx2.lineWidth = 0;
+	ctx2.fillStyle = '#eee';
+	ctx2.fill();
+	ctx2.globalAlpha = 1;
+	
 	ctx2.beginPath();
 	ctx2.moveTo(biggestslice.start*4 + (((biggestslice.end-biggestslice.start)*4)/(100/z)),0);
 	ctx2.lineTo(biggestslice.start*4 + (((biggestslice.end-biggestslice.start)*4)/(100/z)),200);
@@ -67,11 +84,10 @@ $("#slider2").find('.nstSlider').nstSlider({
     }
 });
 
-function killme(){
-	console.log('here');
+function start(){
 	document.querySelector('.user1').innerHTML = "User 1, select where you would like to cut the cake";
 	document.querySelector('.user2').innerHTML = "User 2, click on your preferred slice and then you second-most preferred slice";
-	document.querySelector('.user2trim').innerHTML = "User 2, use the slider to trim a bit off your preferred slice so it matches your second-most preferred slice";
+	document.querySelector('.user2trim').innerHTML = "User 2, use the slider to trim a bit off the left of your preferred slice so it matches your second-most preferred slice";
 	document.querySelector('.user3').innerHTML = "User 3, pick your slice";
 	document.querySelector('.user2pick').innerHTML = "User 2, pick your slice";
 	document.querySelector('.user1slice').innerHTML = "User 1, below is your slice";
@@ -91,16 +107,6 @@ function slice(start, end){
 	
 }
 
-var sliceA = new slice(0,0);
-var sliceB = new slice(0,0);
-var sliceC = new slice(0,0);
-
-var user1 = new slice(0,0);
-var user2 = new slice(0,0);
-var user3 = new slice(0,0);
-
-var biggestslice = new slice(0,0);
-var secondslice = new slice(0,0);
 
 function cut(){
 	console.log('here');
@@ -191,14 +197,47 @@ function display(){
 function pick(ram){
 	if (biggest == 0){
 		biggest = ram;
-		if (biggest == 1){
+		if (biggest == 1){		
+			var a=document.getElementById("myCanvas");
+			var ctxa=a.getContext("2d");
+			ctxa.globalAlpha = 0.25;
+			ctxa.rect(0, 0, a.width, a.height);
+			ctxa.lineWidth = 0;
+			ctxa.fillStyle = '#007F00';
+			ctxa.fill();
+			ctxa.font = "100px Arial";
+			ctxa.fillStyle = '#000000';
+			ctxa.textAlign = 'center';
+			ctxa.fillText("1", (a.width / 2), 110 );
 			biggestslice.start = sliceA.start;
 			biggestslice.end = sliceA.end;
 		} else{
 			if (biggest == 2){
+				var a=document.getElementById("myCanvas2");
+				var ctxa=a.getContext("2d");
+				ctxa.globalAlpha = 0.25;
+				ctxa.rect(0, 0, a.width, a.height);
+				ctxa.lineWidth = 0;
+				ctxa.fillStyle = '#007F00';
+				ctxa.fill();
+				ctxa.font = "100px Arial";
+				ctxa.fillStyle = '#000000';
+				ctxa.textAlign = 'center';
+				ctxa.fillText("1", (a.width / 2), 110 );
 				biggestslice.start = sliceB.start;
 				biggestslice.end = sliceB.end;
 			} else{
+				var a=document.getElementById("myCanvas3");
+				var ctxa=a.getContext("2d");
+				ctxa.globalAlpha = 0.25;
+				ctxa.rect(0, 0, a.width, a.height);
+				ctxa.lineWidth = 0;
+				ctxa.fillStyle = '#007F00';
+				ctxa.fill();
+				ctxa.font = "100px Arial";
+				ctxa.fillStyle = '#000000';
+				ctxa.textAlign = 'center';
+				ctxa.fillText("1", (a.width / 2), 110 );
 				biggestslice.start = sliceC.start;
 				biggestslice.end = sliceC.end;
 			}
@@ -206,13 +245,46 @@ function pick(ram){
 	}else{
 		second = ram;
 		if (second == 1){
+			var a=document.getElementById("myCanvas");
+			var ctxa=a.getContext("2d");
+			ctxa.globalAlpha = 0.25;
+			ctxa.rect(0, 0, a.width, a.height);
+			ctxa.lineWidth = 0;
+			ctxa.fillStyle = '#007F00';
+			ctxa.fill();
+			ctxa.font = "100px Arial";
+			ctxa.fillStyle = '#000000';
+			ctxa.textAlign = 'center';
+			ctxa.fillText("2", (a.width / 2), 110 );
 			secondslice.start = sliceA.start;
 			secondslice.end = sliceA.end;
 		} else{
 			if (second == 2){
+				var a=document.getElementById("myCanvas2");
+				var ctxa=a.getContext("2d");
+				ctxa.globalAlpha = 0.25;
+				ctxa.rect(0, 0, a.width, a.height);
+				ctxa.lineWidth = 0;
+				ctxa.fillStyle = '#007F00';
+				ctxa.fill();
+				ctxa.font = "100px Arial";
+				ctxa.fillStyle = '#000000';
+				ctxa.textAlign = 'center';
+				ctxa.fillText("2", (a.width / 2), 110 );
 				secondslice.start = sliceB.start;
 				secondslice.end = sliceB.end;
 			} else{
+				var a=document.getElementById("myCanvas3");
+				var ctxa=a.getContext("2d");
+				ctxa.globalAlpha = 0.25;
+				ctxa.rect(0, 0, a.width, a.height);
+				ctxa.lineWidth = 0;
+				ctxa.fillStyle = '#007F00';
+				ctxa.fill();
+				ctxa.font = "100px Arial";
+				ctxa.fillStyle = '#000000';
+				ctxa.textAlign = 'center';
+				ctxa.fillText("2", (a.width / 2), 110 );
 				secondslice.start = sliceC.start;
 				secondslice.end = sliceC.end;
 			}
@@ -282,12 +354,20 @@ function cut2(){
     ctx.stroke();
 }
 
-function secondpick(number){
+function secondpick(number, canvas){
 	user3slice = number;
+	var a=document.getElementById(canvas);
+	var ctxa=a.getContext("2d");
+	ctxa.globalAlpha = 0.25;
+	ctxa.rect(0, 0, a.width, a.height);
+	ctxa.lineWidth = 0;
+	ctxa.fillStyle = '#007F00';
+	ctxa.fill();
 	if (number != biggest){
 			user2slice = biggest;
 			lastly();
 	}else{
+		user2slice = biggest;
 		trimmed(number);
 	}
 }
@@ -397,8 +477,16 @@ function trimmed(number){
 	}
 }
 
-function thirdpick(number){
+function thirdpick(number, canvas){
+	var a=document.getElementById(canvas);
+	var ctxa=a.getContext("2d");
+	ctxa.globalAlpha = 0.25;
+	ctxa.rect(0, 0, a.width, a.height);
+	ctxa.lineWidth = 0;
+	ctxa.fillStyle = '#007F00';
+	ctxa.fill();
 	if (number<biggest){
+		
 		user2slice = number +1;
 	}else{
 		user2slice = number;
