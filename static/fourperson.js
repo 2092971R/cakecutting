@@ -2368,7 +2368,6 @@ var cprefered = 0;
 var dprefered = 0;
 
 function twoSlicesOneTrim(){
-	console.log('here');
 	div = document.getElementById('twoSlicesOneTrim');
 	div.style.display = "block";
 	var countof1 = 0;
@@ -2755,12 +2754,12 @@ function twoSliceKChoice(){
 	var b=document.getElementById("twoSliceJD");
 	var ctxb=b.getContext("2d");
 	ctxb.drawImage(img, 0, 0, b.width, b.height);
-	ctxb.rect(0,0,slice[sliceD-1].start*4,b.height);
+	ctxb.rect(0,0,slice[sliceC-1].start*4,b.height);
 	ctxb.lineWidth = 0;
 	ctxb.fillStyle = '#FFFFFF';
 	ctxb.fill();
 	ctxb.stroke()
-	ctxb.rect(slice[sliceD-1].end*4,0,b.width,b.height);
+	ctxb.rect(slice[sliceC-1].end*4,0,b.width,b.height);
 	ctxb.lineWidth = 0;
 	ctxb.fillStyle = '#FFFFFF';
 	ctxb.fill();
@@ -2791,12 +2790,12 @@ function twoSliceJChoice(){
 	var b=document.getElementById("twoSliceIC");
 	var ctxb=b.getContext("2d");
 	ctxb.drawImage(img, 0, 0, b.width, b.height);
-	ctxb.rect(0,0,slice[sliceC-1].start*4,b.height);
+	ctxb.rect(0,0,slice[sliceD-1].start*4,b.height);
 	ctxb.lineWidth = 0;
 	ctxb.fillStyle = '#FFFFFF';
 	ctxb.fill();
 	ctxb.stroke()
-	ctxb.rect(slice[sliceC-1].end*4,0,b.width,b.height);
+	ctxb.rect(slice[sliceD-1].end*4,0,b.width,b.height);
 	ctxb.lineWidth = 0;
 	ctxb.fillStyle = '#FFFFFF';
 	ctxb.fill();
@@ -2840,7 +2839,7 @@ function twoSliceIChoice(){
 		document.querySelector('.twoSlicesi').innerHTML = 'User ' + i + " this is your slice"
 		document.querySelector('.twoSlicesj').innerHTML = 'User ' + j + " this is your slice"
 		document.querySelector('.twoSlicesk').innerHTML = 'User ' + k + " this is your slice"
-		finalAlloc(sliceC-1, sliceA-1, sliceB-1, (10-sliceC-sliceA-sliceB)-1, "twoOnei", "twoOnej", "twoOnek", "twoOne4" );	
+		finalAlloc(sliceD-1, sliceA-1, sliceB-1, (10-sliceD-sliceA-sliceB)-1, "twoOnei", "twoOnej", "twoOnek", "twoOne4" );	
 	}
 	if((trimKA>trimJA)&&(trimKB<trimIB)){
 		div = document.getElementById('twoSlicesAllocation');
@@ -2850,12 +2849,13 @@ function twoSliceIChoice(){
 		document.querySelector('.twoSlicesi').innerHTML = 'User ' + i + " this is your slice"
 		document.querySelector('.twoSlicesj').innerHTML = 'User ' + j + " this is your slice"
 		document.querySelector('.twoSlicesk').innerHTML = 'User ' + k + " this is your slice"
-		finalAlloc(sliceB-1, sliceD-1, sliceA-1, sliceC-1, "twoOnei", "twoOnej", "twoOnek", "twoOne4" );	
+		finalAlloc(sliceB-1, sliceC-1, sliceA-1, sliceD-1, "twoOnei", "twoOnej", "twoOnek", "twoOne4" );	
 	}
 }
 
 function KMustChoose(){
-	document.querySelector('.kChoosing').innerHTML = 'User ' + k + " choose your preferred slice"
+	console.log('kmustchoose');
+	document.querySelector('.kChoosing').innerHTML = 'User ' + k + " choose your preferred slice";
 	div = document.getElementById('twoSlicesOneTrim5');
 	div.style.display = "block";
 	
@@ -2895,14 +2895,14 @@ function twoSliceAlloc(number){
 		document.querySelector('.twoSlicesi').innerHTML = 'User ' + i + " below is your slice"
 		document.querySelector('.twoSlicesj').innerHTML = 'User ' + j + " below is your slice"
 		document.querySelector('.twoSlicesk').innerHTML = 'User ' + k + " below is your slice"
-		finalAlloc(sliceB-1, sliceD-1, sliceA-1, sliceC-1, "twoOnei", "twoOnej", "twoOnek", "twoOne4" );
+		finalAlloc(sliceB-1, sliceC-1, sliceA-1, sliceD-1, "twoOnei", "twoOnej", "twoOnek", "twoOne4" );
 	}else{
 		div = document.getElementById('twoSlicesAllocation');
 		div.style.display = "block";
 		document.querySelector('.twoSlicesi').innerHTML = 'User ' + i + " below is your slice"
 		document.querySelector('.twoSlicesj').innerHTML = 'User ' + j + " below is your slice"
 		document.querySelector('.twoSlicesk').innerHTML = 'User ' + k + " below is your slice"
-		finalAlloc(sliceC-1, sliceA-1, sliceB-1, sliceD-1, "twoOnei", "twoOnej", "twoOnek", "twoOne4" );
+		finalAlloc(sliceD-1, sliceA-1, sliceB-1, sliceC-1, "twoOnei", "twoOnej", "twoOnek", "twoOne4" );
 	}
 }
 
