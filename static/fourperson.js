@@ -1,3 +1,5 @@
+//There are 6 main preference scenarios, each has dependent functions that are situated underneath them
+
 var x = 0;
 var ran = Math.floor(Math.random() * (6 - 2 + 1)) + 2;
 var garden = "garden";
@@ -36,6 +38,7 @@ var slice = [new slice(0,0),new slice(0,0),new slice(0,0),new slice(0,0)];
 
 var theCuts = [0,0,0];
 
+//ALL THE SLIDERS
 $("#slider28").find('.nstSlider').nstSlider({
     "left_grip_selector": ".leftGrip",
     "value_changed_callback": function(cause, leftValue, rightValue) {
@@ -885,6 +888,7 @@ $("#slider1").find('.nstSlider').nstSlider({
     }
 });
 
+//inital function that loads the first garden
 function start(){
 	
 	var thisone = document.getElementById("firstCanvas");
@@ -921,6 +925,7 @@ function start(){
 	
 }
 
+//creates the four original slices
 function cut(){
 	theCuts[cuts] = x;
 	cuts = cuts +1;
@@ -952,6 +957,10 @@ function cut(){
 	
 }
 
+
+
+
+//displays the choices of pieces for each user to rank
 function userranks(user){
 	var a=document.getElementById("ranking"+ user +"1");
 	var ctxa=a.getContext("2d");
@@ -1016,11 +1025,22 @@ var counter3 = 0;
 user1preference = [0,0,0,0];
 user2preference = [0,0,0,0];
 user3preference = [0,0,0,0];
+//is an element in an array?
+function inArray(needle,haystack){
+    var count=haystack.length;
+    for(var i=0;i<count;i++)
+    {
+        if(haystack[i]===needle){return true;}
+    }
+    return false;
+}
 
 
+//processe the ranking of each user
 function rank(user, slice){
 	
 	if (user ==1){
+		if (!(inArray(slice, user1preference))){
 		var a=document.getElementById("ranking"+user.toString()+slice.toString());
 		var ctxa=a.getContext("2d");
 		ctxa.globalAlpha = 0.5;
@@ -1042,8 +1062,10 @@ function rank(user, slice){
 		    div.style.display = "block";
 			userranks("2");
 		}
+		}
 	}	
 	if (user ==2){
+		if (!(inArray(slice, user2preference))){
 		var a=document.getElementById("ranking"+user.toString()+slice.toString());
 		var ctxa=a.getContext("2d");
 		ctxa.globalAlpha = 0.5;
@@ -1065,8 +1087,10 @@ function rank(user, slice){
 		    div.style.display = "block";
 			userranks("3");
 		}
+		}
 	}
 	if (user ==3){
+		if (!(inArray(slice, user3preference))){
 		var a=document.getElementById("ranking"+user.toString()+slice.toString());
 		var ctxa=a.getContext("2d");
 		ctxa.globalAlpha = 0.5;
@@ -1086,10 +1110,12 @@ function rank(user, slice){
 		if (counter3 == 4){
 			letsanalyse();
 		}
+		}
 	}
 }
 var slicecuts = [[], [], [], []];
 
+//decides what preference scenario we are in
 function letsanalyse(){
 	slicecuts[user1preference[0]-1].push(1);
 	slicecuts[user1preference[1]-1].push(1);
@@ -1148,7 +1174,7 @@ function letsanalyse(){
 	}
 	}	
 }
-
+//DIFERENT PREFERENCES CASE
 function differentpreferences(){
 	div = document.getElementById('differentPreferences')
 	div.style.display = "block";
@@ -1156,6 +1182,8 @@ function differentpreferences(){
 	finalAlloc((user1preference[0] -1),(user2preference[0] -1),(user3preference[0] -1), ((10 -user1preference[0] -user2preference[0]-user3preference[0])-1),  "user1", "user2", "user3", "user4")
 }
 
+
+//THREE SLICES HAVE TWO USERS EACH FOR WHOM THAT SLICE IS IN THE TOP TWO
 function threeSlicesTwoTrim(){
 	div = document.getElementById('threeSlicesTwoTrim')
 	div.style.display = "block";
@@ -1361,7 +1389,7 @@ function threeSlices2TrimCut3(){
 		slice[sliceA-1].start= iCut;
 		slice[sliceB-1].start = kCut;
 		
-		var a=document.getElementById("jChoose1");
+		var a=document.getElementById("userJChooseA");
 		var ctxa=a.getContext("2d");
 		ctxa.drawImage(img, 0, 0, a.width, a.height);
 		ctxa.rect(0,0,slice[sliceA-1].start*4,a.height);
@@ -1375,7 +1403,7 @@ function threeSlices2TrimCut3(){
 		ctxa.fill();
 		ctxa.stroke();
 		
-		var b=document.getElementById("userITrim2");
+		var b=document.getElementById("userJChooseB");
 		var ctxb=b.getContext("2d");
 		ctxb.drawImage(img, 0, 0, b.width, b.height);
 		ctxb.rect(0,0,slice[sliceB-1].start*4,b.height);
@@ -1403,6 +1431,8 @@ function jChoose(allocateMe){
 	}
 }
 
+
+//CASE WHERE TWO SLICES HAVE THREE USERS FOR WHOM THEY ARE IN THE TOP TWO
 function twoSlicesThreeTrim(){
 	div = document.getElementById('twoSlicesThreeTrim');
 	div.style.display = "block";
@@ -1734,6 +1764,7 @@ function kChosen(chosen){
 	}
 }
 
+//CASE WHERE EXACTLY ONE SLICE HAS ONE USER FOR WHOM IT IS IN THE TOP TWO
 function oneSliceOneTrim(){
 	div = document.getElementById('oneSliceOneTrim');
 	div.style.display = "block";
@@ -2367,6 +2398,7 @@ function finalChoose(slicehere){
 var cprefered = 0;
 var dprefered = 0;
 
+//CASE WHERE EXACTLY TWO SLICES HAVE ONE USER FOR WHOM IT IS IN THE TOP TWO
 function twoSlicesOneTrim(){
 	div = document.getElementById('twoSlicesOneTrim');
 	div.style.display = "block";
@@ -2510,7 +2542,7 @@ function Dprefered(){
 	ctxa.fill();
 	ctxa.stroke();
 		
-	var b=document.getElementById("userIOther");
+	var b=document.getElementById("userJOther");
 	var ctxb=b.getContext("2d");
 	ctxb.drawImage(img, 0, 0, b.width, b.height);
 	ctxb.rect(0,0,slice[sliceC-1].start*4,b.height);
@@ -2564,6 +2596,8 @@ function Dprefered2(){
 }
 
 function Dprefered3(){
+	div = document.getElementById('twoSlicesAllocation');
+	div.style.display = "block";
 	kcuthere = x;
 	document.querySelector('.twoSlicesi').innerHTML = 'User ' + i + " below is your slice";
 	document.querySelector('.twoSlicesj').innerHTML = 'User ' + j + " below is your slice";
@@ -2906,6 +2940,7 @@ function twoSliceAlloc(number){
 	}
 }
 
+//CASE WHERE EXACTLY THREE SLICES HAVE ONE USER FOR WHOM IT IS IN THE TOP TWO
 function threeSlicesOneTrim(){
 	sliceA = user1preference[0];
 	sliceD = user1preference[1];

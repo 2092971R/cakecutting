@@ -3,7 +3,7 @@ var ran = Math.floor(Math.random() * (6 - 2 + 1)) + 2;
 var garden = "garden";
 garden = garden.concat(ran.toString());
 var img = document.getElementById(garden);
-
+//sliders used
 $('.nstSlider').nstSlider({
     "left_grip_selector": ".leftGrip",
     "value_changed_callback": function(cause, leftValue, rightValue) {
@@ -23,6 +23,7 @@ $('.nstSlider').nstSlider({
     }
 });
 
+//displays the first garden
 function start(){
 	document.querySelector('.user1alloc').innerHTML = "User 1, this is your piece:";
 	document.querySelector('.user2alloc').innerHTML = "User 2, this is your piece:";
@@ -38,6 +39,7 @@ function start(){
 	document.querySelector('.user1').innerHTML = "User 1 use the slider to cut the garden in half";
 }
 
+//user 1's cut of the cake
 function cut(){
 	document.querySelector('.user2').innerHTML = "User 2 select which piece of the garden you prefer";
 
@@ -64,6 +66,7 @@ function cut(){
     ctx.stroke();
 }
 
+//user 2's pick of which slice they want
 function pick(ram){
 	div = document.getElementById('hide2')
 	div.style.display = "block";
